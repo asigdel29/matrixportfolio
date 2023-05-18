@@ -1,6 +1,6 @@
 import React from 'react';
-import Terminal from '../Terminal';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../Components/Layout';
 
 const Projects = () => {
     const navigate = useNavigate();
@@ -43,11 +43,8 @@ const Projects = () => {
     };
 
     return (
-        <div>
-            <Terminal commands={commands} />
-            <h1>Projects</h1>
-            <p>This is the Projects page.</p>
-        </div>
+        <Layout commands={commands}>
+        </Layout>
     );
 };
 

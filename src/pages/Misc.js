@@ -1,6 +1,6 @@
 import React from 'react';
-import Terminal from '../Terminal';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../Components/Layout';
 
 const Misc = () => {
     const navigate = useNavigate();
@@ -43,11 +43,9 @@ const Misc = () => {
     };
 
     return (
-        <div>
-            <Terminal commands={commands} />
-            <h1>Misc</h1>
-            <p>This is the Misc page.</p>
-        </div>
+        <Layout commands={commands}>
+            {/* Content of the Research page */}
+        </Layout>
     );
 };
 
