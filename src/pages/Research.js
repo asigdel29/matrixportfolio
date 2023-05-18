@@ -44,7 +44,7 @@ const Research = () => {
 
     return (
         <Layout commands={commands}>
-            {/* Content of the Research page */}
+            {}
         </Layout>
     );
 };

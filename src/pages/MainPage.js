@@ -4,12 +4,6 @@ import Layout from '../Components/Layout';
 const MainPage = () => {
     const navigate = useNavigate();
     const commands = {
-        default: {
-            description: 'Unknown command, available commands are: ls, about, projects, research, misc',
-            fn: function () {
-                return 'Unknown command, available commands are: ls, about, projects, research, misc';
-            },
-        },
         ls: {
             description: 'List all pages',
             fn: function () {

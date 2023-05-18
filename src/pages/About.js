@@ -44,7 +44,7 @@ const About = () => {
 
     return (
         <Layout commands={commands}>
-            {/* Content of the About page */}
+            {}
         </Layout>
     );
 };

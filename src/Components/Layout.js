@@ -1,13 +1,9 @@
-// import React from 'react';
 import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
 import React, { useState, useEffect } from 'react';
 
 const Layout = ({ commands, children }) => {
-   // const navigate = useNavigate();
     const [dynamicWelcome, setDynamicWelcome] = useState('');
-    const [isTypingDone, setIsTypingDone] = useState(false);
-
     const welcomeMessage = "Heere in the Matrix if you're stuck, you can always ask for help";
     const welcomeText = welcomeMessage.split('');
 
@@ -27,16 +23,17 @@ const Layout = ({ commands, children }) => {
 
     const terminalStyle = {
             backgroundColor: '#000000a1',
-            minHeight: '300px',
-            minWidth: '500px',
+            minHeight: '310px',
+            minWidth: '510px',
             maxWidth: '500%',
             maxHeight: '100%',
-            border: '5px solid #007500',
             borderRadius: '5px',
+            margin: 0,
+            padding: 0,
     };
 
     const terminalinput ={
-        color: '#0BDA51',
+        color: '#00FF00',
         fontSize: '15px',
         fontFamily: 'monospace'
     }
@@ -47,30 +44,37 @@ const Layout = ({ commands, children }) => {
     }
 
     const terminaltext={
-        paddingTop: '3px',
-        color: '#0BDA51'
+        paddingTop: '-100px',
+        color: '#00FF00'
     }
 
     const inputstyle={
         fontSize: '15px',
-        color: '#0BDA51',
+        color: '#00FF00',
         fontFamily: 'monospace'
     }
+
+    const terminalContainerStyle = {
+        position: 'absolute',
+        border: '5px solid #007500',
+        top: '50%',
+        left: '50%',
+        background: '#000000',
+        opacity: '0.86',
+        transform: 'translate(-50%, -50%)',
+        zIndex: 1,
+        margin: 0,
+        padding: 0,
+    };
 
     return (
         <div style={{ position: 'relative' }}>
             <MatrixRain style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1 }} />
             <div
                 className="terminal-container"
-                style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    zIndex: 1,
-                }}
+                style={terminalContainerStyle}
             >
-                <p style={{ color: '#32CD32', fontFamily: 'monospace' }}>
+                <p style={{ color: '#00FF00', fontFamily: 'monospace' ,fontSize: '15px'}}>
                     {dynamicWelcome.replace("undefined", "")}
                 </p>
 
