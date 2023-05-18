@@ -2,6 +2,7 @@ import React from 'react';
 import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
 import { useNavigate } from 'react-router-dom';
+import '../Styles/ConsoleStyles.css';
 
 const Layout = ({ commands, children }) => {
     const navigate = useNavigate();
@@ -19,6 +20,8 @@ const Layout = ({ commands, children }) => {
                     zIndex: 1,
                 }}
             >
+                <div className="react-console-emulator">
+                </div>
                 <Console commands={commands} autoFocus={true} />
             </div>
             {children}

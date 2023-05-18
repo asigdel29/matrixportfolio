@@ -21,16 +21,14 @@ body {
 
 .terminal-container {
     position: absolute;
-    z-index: 2;
-    top: 20%;  /* Adjusted top value */
-    bottom: 20%;  /* Adjusted bottom value */
-    left: 30%;  /* Adjusted left value */
-    right: 30%;  /* Adjusted right value */
-    width: 40%;  /* Adjusted width value */
-    height: 60%;  /* Adjusted height value */
-    writing-mode: horizontal-tb;
-    text-orientation: sideways;
-    padding: 20px;
+    z-index: 1;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 500px;
+    height: 100px;
+    max-width: 800px;
+    max-height: 500px;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     border: 1px solid #0F0;
@@ -38,7 +36,6 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-
 
 .terminal-container [name="react-console-emulator__content"] {
     background-color: rgba(0, 0, 0, 0);
@@ -59,14 +56,14 @@ body {
 
 .console-output {
     margin-bottom: 10px;
-    color: #0F0 !important;
+    color: #0F0;
 }
 
 .console-prompt {
-    color: #0F0 !important;
+    color: #0F0;
 }
 
 .console-input {
-    color: #0F0 !important;
+    color: #0F0;
     font-weight: bold;
 }
