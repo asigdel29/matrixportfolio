@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    background-color: #000;
+}
+
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.matrix-rain canvas {
+    display: block;
+}
+
+.terminal-container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    margin: 20px;
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.terminal-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.console-output {
+    margin-bottom: 10px;
+}
+
+.console-prompt {
+    color: #00ff00;
+}
+
+.console-input {
+    color: #00ff00;
+    font-weight: bold;
+}
