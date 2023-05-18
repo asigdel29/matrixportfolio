@@ -1,11 +1,41 @@
 import React from 'react';
 import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
-import { useNavigate } from 'react-router-dom';
-import '../Styles/ConsoleStyles.css';
+//import { useNavigate } from 'react-router-dom';
 
 const Layout = ({ commands, children }) => {
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
+    const terminalStyle = {
+            backgroundColor: 'black',
+            minHeight: '300px',
+            minWidth: '500px',
+            maxWidth: '500%',
+            maxHeight: '100%',
+            border: '5px solid #007500',
+            borderRadius: '5px',
+    };
+
+    const terminalinput ={
+        color: '#007500',
+        fontSize: '15px',
+        fontFamily: 'monospace'
+    }
+
+    const terminalinputStyle={
+            display: 'inline-flex',
+            width: '100%'
+    }
+
+    const terminaltext={
+        paddingTop: '3px',
+        color: '#007500'
+    }
+
+    const inputstyle={
+        fontSize: '15px',
+        color: '#007500',
+        fontFamily: 'monospace'
+    }
 
     return (
         <div style={{ position: 'relative' }}>
@@ -20,10 +50,20 @@ const Layout = ({ commands, children }) => {
                     zIndex: 1,
                 }}
             >
-                <div className="react-console-emulator">
-                </div>
-                <Console commands={commands} autoFocus={true} />
+
+                <Console
+                    commands={commands}
+                    autoFocus={true}
+                    style={terminalStyle}
+                    contentStyle={terminalinput}
+                    inputAreaStyle={terminalinputStyle}
+                    promptLabelStyle={terminaltext}
+                    inputTextStyle={inputstyle}
+                    promptLabel={'Anu@Matrix:~$'}
+                    welcomeMessage={"Here in the Matrix if you're stuck, you can always ask for help"}
+                />
             </div>
+
             {children}
         </div>
     );
