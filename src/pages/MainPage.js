@@ -1,6 +1,7 @@
 import React from 'react';
 import Console from 'react-console-emulator';
 import { useNavigate } from 'react-router-dom';
+import MatrixRain from '../MatrixRain';
 
 const MainPage = () => {
     const navigate = useNavigate();
@@ -52,6 +53,7 @@ const MainPage = () => {
 
     return (
         <div>
+            <MatrixRain />
             <Console commands={commands} autoFocus={true} />
         </div>
     );

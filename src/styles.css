@@ -52,3 +52,17 @@ body {
     color: #00ff00;
     font-weight: bold;
 }
+
+.terminal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
