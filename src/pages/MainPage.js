@@ -54,9 +54,10 @@ const MainPage = () => {
     return (
         <div>
             <MatrixRain />
-            <Console commands={commands} autoFocus={true} />
+            <div className="terminal-container">
+                <Console commands={commands} autoFocus={true} />
+            </div>
         </div>
     );
 };
-
 export default MainPage;
