@@ -3,43 +3,33 @@ import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Layout';
 import '../Styles/styles.css';
 
-const Modal = ({ onClose }) => {
+const Modal = ({ isOpen, onClose }) => {
     return (
-        <div className="modal">
-            <div className="modal-content">
+        <div className={isOpen ? "modal open" : "modal"}>
+            <div className={isOpen ? "modal-content open" : "modal-content"}>
                 <span className="close" onClick={onClose}>&times;</span>
                 <p>
-                    As an international student from Nepal pursuing a double major in computer science and cognitive science,
-                    I have always been fascinated by the intersection of technology and the human mind. This curiosity led me
-                    to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve
-                    real-world problems.
+                    As an international student from Nepal pursuing a double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.
                 </p>
                 <p>
-                    I have developed a wide variety of skills from my previous internship, research assistantships and academic
-                    studies. During my undergraduate studies, I had the opportunity to work on several projects that allowed me
-                    to develop my programming skills and gain a deeper understanding of computational systems. I also had the
-                    opportunity to intern at a startup company, where I learned the importance of teamwork and effective communication
-                    in the software development process.
+                    I have developed a wide variety of skills from my previous internship, research assistantships, and academic studies. During my undergraduate studies, I had the opportunity to work on several projects that allowed me to develop my programming skills and gain a deeper understanding of computational systems. I also had the opportunity to intern at a startup company, where I learned the importance of teamwork and effective communication in the software development process.
                 </p>
                 <p>
-                    Currently, I am looking for opportunities in software engineering. In my spare time, I enjoy solving coding challenges
-                    to further enhance my skills and stay up-to-date with the latest technologies. I am currently working on a calibrated
-                    peer review tool which functions as a highly scalable web application that assists the process of coordinating and
-                    evaluating peer reviews of student work.
+                    Currently, I am looking for opportunities in software engineering. In my spare time, I enjoy solving coding challenges to further enhance my skills and stay up-to-date with the latest technologies. I am currently working on a calibrated peer review tool which functions as a highly scalable web application that assists the process of coordinating and evaluating peer reviews of student work.
                 </p>
                 <p>
-                    I am open to roles as a software engineer, data scientist, and machine learning engineer. If you have any questions
-                    or would like a copy of my resume, I'd love to connect!
+                    I am open to roles as a software engineer, data scientist, and machine learning engineer. If you have any questions or would like a copy of my resume, I'd love to connect!
                 </p>
                 <p>
                     Skills Include:
-                    Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations, IBM Applied Data Science
-                    Specialization
-                    Computer Science: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, AWS, Docker, React, Angular, CSS
-                    Data Analytics: SQL, R, NoSQL, Tableau, Excel
-                    Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous delivery (CI/CD),
-                    Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark
                 </p>
+                <ul>
+                    <li>Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations, IBM Applied Data Science Specialization</li>
+                    <li>Computer Science: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, AWS, Docker, React, Angular, CSS</li>
+                    <li>Data Analytics: SQL, R, NoSQL, Tableau, Excel</li>
+                    <li>Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous delivery (CI/CD)</li>
+                    <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
+                </ul>
             </div>
         </div>
     );
@@ -57,12 +47,14 @@ const About = () => {
             }
         },
 
+
         about: {
             description: 'You are here',
             fn: function () {
                 return 'You are already at the about page';
             }
         },
+
 
         projects: {
             description: 'Go to Projects page',
@@ -74,6 +66,7 @@ const About = () => {
             }
         },
 
+
         research: {
             description: 'Go to Research page',
             fn: function () {
@@ -83,6 +76,7 @@ const About = () => {
                 return 'Redirecting to the Research Page ...';
             }
         },
+
 
         misc: {
             description: 'Go to Misc page',
@@ -94,6 +88,7 @@ const About = () => {
             }
         },
 
+
         cd: {
             description: 'Go to Main page',
             fn: function () {
@@ -103,6 +98,7 @@ const About = () => {
                 return 'Redirecting to the Main Page ...';
             }
         },
+
 
         Resume: {
             description: 'Go to Resume page',
@@ -114,6 +110,7 @@ const About = () => {
             }
         },
 
+
         Linkedin:{
             description: 'Go to Linkedin profile',
             fn: function () {
@@ -123,6 +120,7 @@ const About = () => {
                 return 'Redirecting to the Linkedin Profile ...';
             }
         },
+
 
         Github:{
             description: 'Go to Github profile',
@@ -134,6 +132,7 @@ const About = () => {
             }
         },
 
+
         Email: {
             description: 'Shoot me an email',
             fn: function () {
@@ -144,18 +143,21 @@ const About = () => {
             }
         },
 
+
+
         Bio: {
             description: 'A little about me',
             fn: function () {
                 setIsBioOpen(true);
+                return 'Opening Bio...';
             }
         }
     };
 
     return (
-        <Layout commands={commands}>
+        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more">
             {isBioOpen && (
-                <Modal onClose={() => setIsBioOpen(false)} />
+                <Modal isOpen={isBioOpen} onClose={() => setIsBioOpen(false)} />
             )}
             <button onClick={commands.Bio.fn} style={{ backgroundColor: 'black', color: '#00FF00', fontFamily: 'monospace', zIndex: 100, visibility: 'hidden', }}>Bio</button>
         </Layout>

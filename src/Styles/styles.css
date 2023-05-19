@@ -9,21 +9,28 @@
     background-color: #000000;
     color: #00FF00;
     font-family: 'monospace';
+    display: none; /* Ensure the modal is initially hidden */
+}
+
+.modal.open {
+    display: block; /* Make the modal visible when .open is added */
 }
 
 .modal-content {
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    opacity: 0;
 }
 
 .modal-content.open {
-    max-height: 500px; /* adjust this to the height of your content */
+    transform: scale(1);
+    opacity: 1;
 }
+
 
 .close {
     color: #00FF00;

@@ -43,7 +43,7 @@ const Misc = () => {
     };
 
     return (
-        <Layout commands={commands}>
+        <Layout commands={commands} welcomeMessage="Thhere's a lot of unorganized stuff you'll find here ">
             {}
         </Layout>
     );

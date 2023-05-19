@@ -43,7 +43,7 @@ const Research = () => {
     };
 
     return (
-        <Layout commands={commands}>
+        <Layout commands={commands} welcomeMessage="IIf you're into Academia, A lot of cool projects here ">
             {}
         </Layout>
     );

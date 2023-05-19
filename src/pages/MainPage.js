@@ -41,8 +41,7 @@ const MainPage = () => {
     };
 
     return (
-
-        <Layout commands={commands}>
+        <Layout commands={commands} welcomeMessage="Weelcome! Here in the Matrix if you're stuck, you can always use command 'help'">
         </Layout>
     );
 };

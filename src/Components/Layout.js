@@ -2,9 +2,8 @@ import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
 import React, { useState, useEffect } from 'react';
 
-const Layout = ({ commands, children }) => {
+const Layout = ({ commands, children, welcomeMessage }) => {
     const [dynamicWelcome, setDynamicWelcome] = useState('');
-    const welcomeMessage = "Heere in the Matrix if you're stuck, you can always ask for help";
     const welcomeText = welcomeMessage.split('');
 
     useEffect(() => {
@@ -19,7 +18,7 @@ const Layout = ({ commands, children }) => {
         }, 80);
 
         return () => clearInterval(welcomeMessageInterval);
-    }, []);
+    }, [welcomeMessage]);
 
     const terminalStyle = {
             backgroundColor: '#000000a1',

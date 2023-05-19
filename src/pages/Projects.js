@@ -43,7 +43,7 @@ const Projects = () => {
     };
 
     return (
-        <Layout commands={commands}>
+        <Layout commands={commands} welcomeMessage="Thhis is where you'll find some of my projects, For more visit my github">
         </Layout>
     );
 };
