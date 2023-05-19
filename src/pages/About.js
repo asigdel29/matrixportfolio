@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Layout';
 import '../Styles/styles.css';
+import { CSSTransition } from 'react-transition-group';
+import { createPortal } from 'react-dom';
 
-const Modal = ({ isOpen, onClose, isAnimatingClose }) => {
-    return (
-        <div className={isOpen ? "modal open" : isAnimatingClose ? "modal closing" : "modal"}>
-            <div className={isOpen ? "modal-content open" : isAnimatingClose ? "modal-content closing" : "modal-content"}>
+
+const Modal = ({ isOpen, onClose }) => {
+    return createPortal(
+        <CSSTransition in={isOpen} timeout={1000} classNames="unfold" unmountOnExit>
+            <div className={`modal-content ${isOpen ? 'open' : ''}`}>
                 <span className="close" onClick={onClose}>&times;</span>
                 <p>
                     As an international student from Nepal pursuing a double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.
@@ -31,7 +34,8 @@ const Modal = ({ isOpen, onClose, isAnimatingClose }) => {
                     <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
                 </ul>
             </div>
-        </div>
+        </CSSTransition>,
+        document.body
     );
 };
 
@@ -45,8 +49,9 @@ const About = () => {
         setTimeout(() => {
             setIsBioOpen(false);
             setIsAnimatingClose(false);
-        }, 500); // 500ms matches the length of the closing animation
+        }, 1000);
     };
+
 
     const commands = {
         ls: {
@@ -150,16 +155,16 @@ const About = () => {
         Bio: {
             description: 'A little about me',
             fn: function () {
-                setTimeout(function () {
+              //  setTimeout(function () {
                 setIsBioOpen(true);
-                }, 1200);
+            //    }, 1200);
                 return 'Here it comes...';
             }
         }
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more. Use 'cd' to go back to main">
+        <Layout commands={commands} welcomeMessage="You've made it to the About page. Enter command 'ls' to find out more. Use 'cd' to go back to main">
             {(isBioOpen || isAnimatingClose) && (
                 <Modal isOpen={isBioOpen} onClose={closeModal} isAnimatingClose={isAnimatingClose} />
             )}
@@ -167,4 +172,5 @@ const About = () => {
         </Layout>
     );
 }
+
 export default About;

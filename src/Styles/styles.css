@@ -9,17 +9,9 @@
     background-color: #000000;
     color: #00FF00;
     font-family: 'monospace';
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.modal.open {
     opacity: 1;
-    animation: appear 0.5s forwards;
-}
-
-.modal.closing {
-    animation: disappear 0.5s forwards;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
 }
 
 .modal-content {
@@ -27,50 +19,17 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .modal-content.open {
-    animation: unfold 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .modal-content.closing {
-    animation: fold 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes disappear {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes unfold {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes fold {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
 }
 
 .close {
@@ -85,4 +44,22 @@
     color: #aaa;
     text-decoration: none;
     cursor: pointer;
+}
+
+.unfold-enter {
+    transform: scaleY(0.005) scaleX(0);
+}
+
+.unfold-enter-active {
+    transform: scaleY(1) scaleX(1);
+    transition: transform 1s;
+}
+
+.unfold-exit {
+    transform: scaleY(1) scaleX(1);
+}
+
+.unfold-exit-active {
+    transform: scaleY(0.005) scaleX(0);
+    transition: transform 1s;
 }
