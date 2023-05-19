@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Layout';
 import '../Styles/styles.css';
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, isAnimatingClose }) => {
     return (
-        <div className={isOpen ? "modal open" : "modal"}>
-            <div className={isOpen ? "modal-content open" : "modal-content"}>
+        <div className={isOpen ? "modal open" : isAnimatingClose ? "modal closing" : "modal"}>
+            <div className={isOpen ? "modal-content open" : isAnimatingClose ? "modal-content closing" : "modal-content"}>
                 <span className="close" onClick={onClose}>&times;</span>
                 <p>
                     As an international student from Nepal pursuing a double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.
@@ -38,6 +38,15 @@ const Modal = ({ isOpen, onClose }) => {
 const About = () => {
     const navigate = useNavigate();
     const [isBioOpen, setIsBioOpen] = useState(false);
+    const [isAnimatingClose, setIsAnimatingClose] = useState(false);
+
+    const closeModal = () => {
+        setIsAnimatingClose(true);
+        setTimeout(() => {
+            setIsBioOpen(false);
+            setIsAnimatingClose(false);
+        }, 500); // 500ms matches the length of the closing animation
+    };
 
     const commands = {
         ls: {
@@ -138,25 +147,24 @@ const About = () => {
             }
         },
 
-
-
         Bio: {
             description: 'A little about me',
             fn: function () {
+                setTimeout(function () {
                 setIsBioOpen(true);
-                return 'Opening Bio...';
+                }, 1200);
+                return 'Here it comes...';
             }
         }
     };
 
     return (
         <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more. Use 'cd' to go back to main">
-            {isBioOpen && (
-                <Modal isOpen={isBioOpen} onClose={() => setIsBioOpen(false)} />
+            {(isBioOpen || isAnimatingClose) && (
+                <Modal isOpen={isBioOpen} onClose={closeModal} isAnimatingClose={isAnimatingClose} />
             )}
-            <button onClick={commands.Bio.fn} style={{ backgroundColor: 'black', color: '#00FF00', fontFamily: 'monospace', zIndex: 100, visibility: 'hidden', }}>Bio</button>
+            {/* ... rest of your component */}
         </Layout>
     );
 }
-
 export default About;

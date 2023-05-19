@@ -9,28 +9,69 @@
     background-color: #000000;
     color: #00FF00;
     font-family: 'monospace';
-    display: none; /* Ensure the modal is initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .modal.open {
-    display: block; /* Make the modal visible when .open is added */
+    opacity: 1;
+    animation: appear 0.5s forwards;
+}
+
+.modal.closing {
+    animation: disappear 0.5s forwards;
 }
 
 .modal-content {
-    transform: scale(0);
-    transition: transform 0.5s ease-out;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    opacity: 0;
 }
 
 .modal-content.open {
-    transform: scale(1);
-    opacity: 1;
+    animation: unfold 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
+.modal-content.closing {
+    animation: fold 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes unfold {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fold {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
 
 .close {
     color: #00FF00;
