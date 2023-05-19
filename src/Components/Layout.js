@@ -21,37 +21,37 @@ const Layout = ({ commands, children, welcomeMessage }) => {
     }, [welcomeMessage]);
 
     const terminalStyle = {
-            backgroundColor: '#000000a1',
-            minHeight: '310px',
-            minWidth: '510px',
-            maxWidth: '500%',
-            maxHeight: '100%',
-            borderRadius: '5px',
-            margin: 0,
-            padding: 0,
+        backgroundColor: '#000000a1',
+        minHeight: '310px',
+        minWidth: '510px',
+        maxWidth: '500%',
+        maxHeight: '100%',
+        borderRadius: '5px',
+        margin: 0,
+        padding: 0,
     };
 
-    const terminalinput ={
+    const terminalinput = {
         color: '#00FF00',
         fontSize: '15px',
-        fontFamily: 'monospace'
-    }
+        fontFamily: 'monospace',
+    };
 
-    const terminalinputStyle={
-            display: 'inline-flex',
-            width: '100%'
-    }
+    const terminalinputStyle = {
+        display: 'inline-flex',
+        width: '100%',
+    };
 
-    const terminaltext={
+    const terminaltext = {
         paddingTop: '-100px',
-        color: '#00FF00'
-    }
+        color: '#00FF00',
+    };
 
-    const inputstyle={
+    const inputstyle = {
         fontSize: '15px',
         color: '#00FF00',
-        fontFamily: 'monospace'
-    }
+        fontFamily: 'monospace',
+    };
 
     const terminalContainerStyle = {
         position: 'absolute',
@@ -69,12 +69,9 @@ const Layout = ({ commands, children, welcomeMessage }) => {
     return (
         <div style={{ position: 'relative' }}>
             <MatrixRain style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1 }} />
-            <div
-                className="terminal-container"
-                style={terminalContainerStyle}
-            >
-                <p style={{ color: '#00FF00', fontFamily: 'monospace' ,fontSize: '15px'}}>
-                    {dynamicWelcome.replace("undefined", "")}
+            <div className="terminal-container" style={terminalContainerStyle}>
+                <p style={{ color: '#00FF00', fontFamily: 'monospace', fontSize: '15px' }}>
+                    {dynamicWelcome.replace('undefined', '')}
                 </p>
 
                 <Console
