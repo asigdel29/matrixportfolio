@@ -12,6 +12,7 @@ const Projects = () => {
                 return 'Project 1\nProject 2\nProject 3';
             }
         },
+
         about: {
             description: 'Go to About page',
             fn: function () {
@@ -19,31 +20,40 @@ const Projects = () => {
                 return 'Redirecting to About page...';
             }
         },
+
         research: {
             description: 'Go to Research page',
             fn: function () {
-                navigate('/research');
-                return 'Redirecting to Research page...';
+                setTimeout(function () {
+                    navigate('/research');
+                }, 1200);
+                return 'Redirecting to the Research Page ...';
             }
         },
+
         misc: {
             description: 'Go to Misc page',
             fn: function () {
-                navigate('/misc');
-                return 'Redirecting to Misc page...';
+                setTimeout(function () {
+                    navigate('/misc');
+                }, 1200);
+                return 'Redirecting to the Miscellaneous Page ...';
             }
         },
+
         cd: {
             description: 'Go to Main page',
             fn: function () {
-                navigate('/');
+                setTimeout(function () {
+                    navigate('/');
+                }, 1200);
                 return 'Redirecting to Main page...';
             }
         }
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Thhis is where you'll find some of my projects, For more visit my github">
+        <Layout commands={commands} welcomeMessage="Thhis is where you'll find some of my projects, Use 'cd' to go back to main">
         </Layout>
     );
 };

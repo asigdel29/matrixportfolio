@@ -12,6 +12,14 @@ const Misc = () => {
                 return 'Misc Project 1\nMisc Project 2\nMisc Project 3';
             }
         },
+
+        Misc: {
+            description: 'You are here',
+            fn: function () {
+                return 'You are already at the miscellaneous page';
+            }
+        },
+
         about: {
             description: 'Go to About page',
             fn: function () {
@@ -19,31 +27,40 @@ const Misc = () => {
                 return 'Redirecting to About page...';
             }
         },
+
         projects: {
             description: 'Go to Projects page',
             fn: function () {
-                navigate('/projects');
-                return 'Redirecting to Projects page...';
+                setTimeout(function () {
+                    navigate('/projects');
+                }, 1200);
+                return 'Redirecting to the projects Page ...';
             }
         },
+
         research: {
             description: 'Go to Research page',
             fn: function () {
-                navigate('/research');
-                return 'Redirecting to Research page...';
+                setTimeout(function () {
+                    navigate('/research');
+                }, 1200);
+                return 'Redirecting to the Research Page ...';
             }
         },
+
         cd: {
             description: 'Go to Main page',
             fn: function () {
-                navigate('/');
-                return 'Redirecting to Main page...';
+                setTimeout(function () {
+                    navigate('/');
+                }, 1200);
+                return 'Redirecting to the Main Page ...';
             }
-        }
+        },
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Thhere's a lot of unorganized stuff you'll find here ">
+        <Layout commands={commands} welcomeMessage="Thhere's a lot of unorganized stuff you'll find here. Use 'cd' to go back to main ">
             {}
         </Layout>
     );

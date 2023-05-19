@@ -6,6 +6,14 @@ const Research = () => {
     const navigate = useNavigate();
 
     const commands = {
+
+        Research: {
+            description: 'You are here',
+            fn: function () {
+                return 'You are already at the Research page';
+            }
+        },
+
         ls: {
             description: 'List all projects on the page',
             fn: function () {
@@ -19,31 +27,40 @@ const Research = () => {
                 return 'Redirecting to About page...';
             }
         },
+
         projects: {
             description: 'Go to Projects page',
             fn: function () {
-                navigate('/projects');
-                return 'Redirecting to Projects page...';
+                setTimeout(function () {
+                    navigate('/projects');
+                }, 1200);
+                return 'Redirecting to the projects Page ...';
             }
         },
+
         misc: {
             description: 'Go to Misc page',
             fn: function () {
-                navigate('/misc');
-                return 'Redirecting to Misc page...';
+                setTimeout(function () {
+                    navigate('/misc');
+                }, 1200);
+                return 'Redirecting to the Miscellaneous Page ...';
             }
         },
+
         cd: {
             description: 'Go to Main page',
             fn: function () {
-                navigate('/');
-                return 'Redirecting to Main page...';
+                setTimeout(function () {
+                    navigate('/');
+                }, 1200);
+                return 'Redirecting to the Main Page ...';
             }
-        }
+        },
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="IIf you're into Academia, A lot of cool projects here ">
+        <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to main">
             {}
         </Layout>
     );

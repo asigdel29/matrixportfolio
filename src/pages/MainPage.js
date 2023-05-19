@@ -13,28 +13,36 @@ const MainPage = () => {
         about: {
             description: 'Go to About page',
             fn: function () {
-                navigate('/about');
+                setTimeout(function () {
+                    navigate('/about');
+                }, 1200);
                 return 'Redirecting...';
             },
         },
         projects: {
             description: 'Go to Projects page',
             fn: function () {
-                navigate('/projects');
+                setTimeout(function () {
+                    navigate('/projects');
+                }, 1200);
                 return 'Redirecting...';
             },
         },
         research: {
             description: 'Go to Research page',
             fn: function () {
-                navigate('/research');
+                setTimeout(function () {
+                    navigate('/research');
+                }, 1200);
                 return 'Redirecting...';
             },
         },
         misc: {
             description: 'Go to Misc page',
             fn: function () {
-                navigate('/misc');
+                setTimeout(function () {
+                    navigate('/misc');
+                }, 1200);
                 return 'Redirecting...';
             },
         },

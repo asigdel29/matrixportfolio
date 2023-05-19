@@ -47,14 +47,12 @@ const About = () => {
             }
         },
 
-
         about: {
             description: 'You are here',
             fn: function () {
                 return 'You are already at the about page';
             }
         },
-
 
         projects: {
             description: 'Go to Projects page',
@@ -65,7 +63,6 @@ const About = () => {
                 return 'Redirecting to the projects Page ...';
             }
         },
-
 
         research: {
             description: 'Go to Research page',
@@ -88,7 +85,6 @@ const About = () => {
             }
         },
 
-
         cd: {
             description: 'Go to Main page',
             fn: function () {
@@ -98,7 +94,6 @@ const About = () => {
                 return 'Redirecting to the Main Page ...';
             }
         },
-
 
         Resume: {
             description: 'Go to Resume page',
@@ -155,7 +150,7 @@ const About = () => {
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more">
+        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more. Use 'cd' to go back to main">
             {isBioOpen && (
                 <Modal isOpen={isBioOpen} onClose={() => setIsBioOpen(false)} />
             )}
