@@ -7,13 +7,14 @@ const About = () => {
     const navigate = useNavigate();
     const [isBioOpen, setIsBioOpen] = useState(false);
     const [isAnimatingClose, setIsAnimatingClose] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
 
     const closeModal = () => {
-        if (isAnimatingClose) return;
-        setIsAnimatingClose(true);
+        if (isClosing) return;
+        setIsClosing(true);
         setTimeout(() => {
             setIsBioOpen(false);
-            setIsAnimatingClose(false);
+            setIsClosing(false);
         }, 1500);
     };
 
@@ -199,8 +200,8 @@ const About = () => {
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter command 'ls' to find out more. Use 'cd' to go back to the main page.">
-            {(isBioOpen || isAnimatingClose) && (
+        <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter the command 'ls' to find out more. Use 'cd' to go back to the main page.">
+            {isBioOpen && !isAnimatingClose && !isClosing && (
                 <Modal isOpen={isBioOpen} onClose={closeModal} />
             )}
         </Layout>
