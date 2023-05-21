@@ -161,7 +161,7 @@ const About = () => {
                 setTimeout(function () {
                     setIsResumeOpen(true);
                 }, 1200);
-                return 'Opening the resume modal...';
+                return 'Here it comes...';
             }
         },
 
