@@ -2,18 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Layout';
 import '../Styles/styles.css';
+import ResumeModal from '../Components/ResumeModal';
 
 const About = () => {
     const navigate = useNavigate();
     const [isBioOpen, setIsBioOpen] = useState(false);
     const [isAnimatingClose, setIsAnimatingClose] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-    const closeModal = () => {
+    const closeModal = (modalType) => {
         if (isClosing) return;
+
         setIsClosing(true);
         setTimeout(() => {
-            setIsBioOpen(false);
+            if (modalType === 'bio') {
+                setIsBioOpen(false);
+            } else if (modalType === 'resume') {
+                setIsResumeOpen(false);
+            }
             setIsClosing(false);
         }, 1500);
     };
@@ -149,12 +156,12 @@ const About = () => {
         },
 
         Resume: {
-            description: 'Go to Resume page',
+            description: 'Open my resume',
             fn: function () {
                 setTimeout(function () {
-                    window.open('https://cs.oswego.edu/~asigdel/Resume.pdf', '_blank');
+                    setIsResumeOpen(true);
                 }, 1200);
-                return 'Redirecting to the resume page...';
+                return 'Opening the resume modal...';
             }
         },
 
@@ -203,6 +210,9 @@ const About = () => {
         <Layout commands={commands} welcomeMessage="Yoou've made it to the About page. Enter the command 'ls' to find out more. Use 'cd' to go back to the main page.">
             {isBioOpen && !isAnimatingClose && !isClosing && (
                 <Modal isOpen={isBioOpen} onClose={closeModal} />
+            )}
+            {isResumeOpen && !isAnimatingClose && !isClosing && (
+                <ResumeModal isOpen={isResumeOpen} onClose={() => closeModal('resume')} />
             )}
         </Layout>
     );
