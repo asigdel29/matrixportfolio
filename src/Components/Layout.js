@@ -15,7 +15,7 @@ const Layout = ({ commands, children, welcomeMessage }) => {
             } else {
                 clearInterval(welcomeMessageInterval);
             }
-        }, 80);
+        }, 45);
 
         return () => clearInterval(welcomeMessageInterval);
     }, [welcomeMessage]);

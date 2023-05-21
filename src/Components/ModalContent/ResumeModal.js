@@ -120,7 +120,7 @@ Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark
 
     const [visibleText, setVisibleText] = useState('');
     const [typingIndex, setTypingIndex] = useState(0);
-    const typingSpeed = 30;
+    const typingSpeed = 10;
 
     useEffect(() => {
         let intervalId;

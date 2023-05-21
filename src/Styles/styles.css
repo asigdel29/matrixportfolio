@@ -38,6 +38,7 @@
     transform: translateY(0);
     animation: unfold 0.5s forwards;
     color:#00D100;
+    font-family: monospace;
 }
 
 .modal-content.closing {
