@@ -17,7 +17,7 @@ const Research = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'Research Project 1\nResearch Project 2\nResearch Project 3';
+                return 'UrbanCPS\nFreeMoCap\nInternationalTradeProject';
             }
         },
         about: {
@@ -57,6 +57,16 @@ const Research = () => {
                 return 'Redirecting to the Main Page ...';
             }
         },
+        UrbanCPS:{
+
+    },
+        FreeMoCap:{
+
+        },
+        InternationalTradeProject:{
+
+        }
+
     };
 
     return (
