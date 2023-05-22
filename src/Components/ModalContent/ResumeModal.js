@@ -33,7 +33,7 @@ Research Assistant November 2022 - Present
 to form and coordinate platoons.
 
 Cognitive Dynamics Lab - SUNY Oswego, NY
-Research Assistant August 2021 - Present
+Research Assistant August 2021 - May 2023
 ● Engineered a research-grade markerless motion capture program using OpenPose, DeepLabCut 
 for data collection; Calibrated software accuracy to 99.3% via Charuco Boards.
 ● Streamlined the data collection processes using Python to automate the data collection 
@@ -43,7 +43,7 @@ retrieve process to find out how the search and retrieve process within our brai
 alter when given the same task multiple times.
 
 School of Business, SUNY Oswego, NY
-Data Analyst - International Trade Project December 2022 - Present
+Data Analyst - International Trade Project December 2022 - May 2023
 ● Leverage expertise in data acquisition and organization to generate actionable 
 insights and develop innovative data visualization strategies.
 ● Utilize Python, Tableau, and Gephi to conduct complex data analyses and present 
@@ -92,7 +92,7 @@ Simple Storage Service (S3), Codebuild, ECR, and Fargate
 LEADERSHIP EXPERIENCE
 
 Computer Science Association Oswego, NY
-President May 2022 - December 2022
+President May 2022 - May 2023
 ● Trained junior officers and delegated tasks
 ● Maintained communication with the Student board
 ● Organized and judged the regional ACM programming competition.
