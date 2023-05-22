@@ -58,12 +58,34 @@ const Research = () => {
             }
         },
         UrbanCPS:{
+            description: 'Research Project for Cyber Physical Systems Lab',
+            fn: function () {
+                setTimeout(function () {
+                    setIsCPSOpen(true);
+                }, 1200);
+                return "You're gonna be astonished by this one...";
+            }
+
 
     },
         FreeMoCap:{
+            description:'Research Project for Cognitive Dynamics Lab',
+            fn: function () {
+                setTimeout(function () {
+                    setIsMocapOpen(true);
+                }, 1200);
+                return 'Cool Motion Capture stuff coming right up...';
+            }
 
         },
         InternationalTradeProject:{
+            description:'Research Project for School of Buisness',
+            fn: function () {
+                setTimeout(function () {
+                    setIsInternationalTradeOpen(true);
+                }, 1200);
+                return 'Excelsior...';
+            }
 
         }
 
