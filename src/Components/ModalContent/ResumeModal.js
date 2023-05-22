@@ -9,9 +9,12 @@ New York | +1-315-806-4832 | Email -asigdel@oswego.edu | HackerRank - asigdel
 
 EDUCATION
 State University of New York Oswego, NY
-Bachelors in Computer Science and Cognitive Science August 2019-May 2023
+Bachelors in Computer Science and Cognitive Science 
+August 2019-May 2023
 
-Presidential & Destination Oswego Scholarship, President’s List, Dean’s List
+State University of New York Oswego, NY
+Masters in Science in Biomedical and Health Informatics
+August 2023-May 2024
 
 WORK EXPERIENCE:
 
