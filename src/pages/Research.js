@@ -114,7 +114,7 @@ const Research = () => {
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Enter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
+        <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
             {isCPSOpen && !isAnimatingClose && !isClosing && (
                 <CPSModal isOpen={isCPSOpen} onClose={() => closeModal('cps')} />
             )}

@@ -9,7 +9,8 @@ const FreeMoCapModal = ({ isOpen, onClose }) => {
     and explore how the search and retrieval process within our brains changes when given the same task multiple times. This research has the potential to shed light on the neural mechanisms 
     underlying memory processes and has important implications for improving our understanding of human cognition.</p>
     
-    <p>For further information about this project, you can check it out on <a href="https://github.com/asigdel29/freemocap">GitHub</a></p>
+    <p>For further information about this project, you can check it out on <a href="https://github.com/asigdel29/freemocap" style="color: #00FF00; text-decoration: underline;">GitHub</a>.</p>
+     <p>You can also check out my QUEST research symposium <a href="https://docs.google.com/presentation/d/1wzvsPKkncVc5REO9GTR4l64NAx8Hnsi2qmCLuc-iLeo/edit#slide=id.p" style="color: #00FF00; text-decoration: underline;">presentation</a>.</p>
 
   `;
 

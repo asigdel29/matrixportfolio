@@ -6,6 +6,9 @@ const InternationalTradeModal = ({ isOpen, onClose }) => {
     insights and develop innovative data visualization strategies. I conducted complex data analyses using Python, Tableau, and Gephi, and used these tools 
     to create compelling visual representations of my findings. By leveraging my skills in data analysis and visualization, I was able to provide valuable insights
      to the School of Business that helped inform decision-making and drive improvements in performance.</p>
+     
+     <p>For further information about this project, you can check out my QUEST research symposium <a href="https://docs.google.com/presentation/d/1aIy3tss3UV1IjCYLcwTVSv51hs2AkBwCuqDLCaZFXB4/edit#slide=id.p" style="color: #00FF00; text-decoration: underline;">presentation</a>.</p>
+
   `;
 
     const [visibleText, setVisibleText] = useState('');

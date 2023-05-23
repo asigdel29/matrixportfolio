@@ -8,7 +8,7 @@ const CPSModal = ({ isOpen, onClose }) => {
     In the control phase, the vehicle uses sensing data to determine the speed for a safe distance with a control algorithm. Finally, in the negotiation phase, each vehicle proposes a speed and acceleration value, 
     and they negotiate with one another to agree on a value that is safe and efficient for the platoon. With this CACC system, we were able to improve traffic flow and reduce the likelihood of accidents in urban areas.</p>
 
-    <p>For further information about this project, you can check it out on <a href="https://github.com/tenbergen/Urban-CPS" GitHub: </a></p>
+    <p>For further information about this project, you can check it out on <a href="https://github.com/tenbergen/Urban-CPS" style="color: #00FF00; text-decoration: underline;">GitHub</a>.</p>
     
   `;
 
