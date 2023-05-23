@@ -61,34 +61,31 @@ const Research = () => {
             description: 'Research Project for Cyber Physical Systems Lab',
             fn: function () {
                 setTimeout(function () {
-                    setIsCPSOpen(true);
+                  //  setIsCPSOpen(true);
                 }, 1200);
                 return "You're gonna be astonished by this one...";
             }
+        },
 
-
-    },
         FreeMoCap:{
             description:'Research Project for Cognitive Dynamics Lab',
             fn: function () {
                 setTimeout(function () {
-                    setIsMocapOpen(true);
+                   // setIsMotionCaptureOpen(true);
                 }, 1200);
                 return 'Cool Motion Capture stuff coming right up...';
             }
-
         },
+
         InternationalTradeProject:{
-            description:'Research Project for School of Buisness',
+            description:'Research Project for School of Business',
             fn: function () {
                 setTimeout(function () {
-                    setIsInternationalTradeOpen(true);
+                  //  setIsInternationalTradeOpen(true);
                 }, 1200);
                 return 'Excelsior...';
             }
-
         }
-
     };
 
     return (
