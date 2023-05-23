@@ -2,24 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const CPSModal = ({ isOpen, onClose }) => {
     const modalText = `
-    <p>As an international student from Nepal with a bachelors double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.</p>
+    <p>As a researcher at the Cyber Physical Systems Lab SUNY Oswego, I developed a Collaborative Adaptive Cruise Control (CACC) system that allows 
+    vehicles to communicate with each other and negotiate speed to maintain a safe and efficient driving distance. The system went through four simulation phases, 
+    starting with the vehicle sensing phase where it detects its own distance, speed, and relative position. The communication phase allows the vehicle to communicate with other cars in its vicinity. 
+    In the control phase, the vehicle uses sensing data to determine the speed for a safe distance with a control algorithm. Finally, in the negotiation phase, each vehicle proposes a speed and acceleration value, 
+    and they negotiate with one another to agree on a value that is safe and efficient for the platoon. With this CACC system, we were able to improve traffic flow and reduce the likelihood of accidents in urban areas.</p>
 
-    <p>I am currently pursuing a Masters in Science in BioMedical Health Informatics.</p>
-
-    <p>I have developed a wide variety of skills from my previous internship, research assistantships, and academic studies. During my undergraduate studies, I had the opportunity to work on several projects that allowed me to develop my programming skills and gain a deeper understanding of computational systems. I also had the opportunity to intern at a startup company, where I learned the importance of teamwork and effective communication in the software development process.</p>
-
-    <p>Currently, I am looking for opportunities in software engineering. In my spare time, I enjoy solving coding challenges to further enhance my skills and stay up-to-date with the latest technologies. I am currently working on a calibrated peer review tool which functions as a highly scalable web application that assists the process of coordinating and evaluating peer reviews of student work.</p>
-
-    <p>I am open to roles as a software engineer, data scientist, and machine learning engineer. If you have any questions or would like a copy of my resume, I'd love to connect!</p>
-
-    <p>Skills Include:</p>
-    <ul>
-      <li>Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations, IBM Applied Data Science Specialization</li>
-      <li>Computer Science: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, AWS, Docker, React, Angular, CSS</li>
-      <li>Data Analytics: SQL, R, NoSQL, Tableau, Excel</li>
-      <li>Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous deployment (CI/CD)</li>
-      <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
-    </ul>
+    <p>For further information about this project, you can check it out on <a href="https://github.com/tenbergen/Urban-CPS" GitHub: </a></p>
+    
   `;
 
     const [visibleText, setVisibleText] = useState('');
