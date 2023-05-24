@@ -41,7 +41,7 @@ const Research = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'UrbanCPS\nFreeMoCap\nInternationalTradeProject';
+                return 'Project1\nProject2\nProject3';
             }
         },
         about: {
@@ -82,7 +82,7 @@ const Research = () => {
             }
         },
 
-        UrbanCPS: {
+        Project1: {
             description: 'Research Project for Cyber Physical Systems Lab',
             fn: function () {
                 setTimeout(function () {
@@ -92,7 +92,7 @@ const Research = () => {
             }
         },
 
-        FreeMoCap: {
+        Project2: {
             description: 'Research Project for Cognitive Dynamics Lab',
             fn: function () {
                 setTimeout(function () {
@@ -102,7 +102,7 @@ const Research = () => {
             }
         },
 
-        InternationalTradeProject: {
+        Project3: {
             description: 'Research Project for School of Business',
             fn: function () {
                 setTimeout(function () {

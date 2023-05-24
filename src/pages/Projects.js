@@ -9,7 +9,7 @@ const Projects = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'Project 1\nProject 2\nProject 3';
+                return 'Project 1\nProject 2\nProject 3\nProject4';
             }
         },
 
@@ -49,7 +49,23 @@ const Projects = () => {
                 }, 1200);
                 return 'Redirecting to Main page...';
             }
-        }
+        },
+
+        Project1:{
+            description: 'Diabetic Retinopathy Detection',
+        },
+
+        Project2:{
+            description: 'Real Time Financial Data',
+        },
+
+        Project3:{
+            description: 'Robot Radar',
+        },
+
+        Project4:{
+            description: 'Go to Main page',
+        },
     };
 
     return (
