@@ -1,9 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Layout';
+import DBRModal from "../Components/ModalContent/DBRModal";
+import RobotModal from "../Components/ModalContent/RobotModal";
+import RealTimeModal from "../Components/ModalContent/RealTimeModal";
+import CPRModal from "../Components/ModalContent/CPRModal";
 
 const Projects = () => {
     const navigate = useNavigate();
+    const [isAnimatingClose, setIsAnimatingClose] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+    const [isProject1Open, setIsProject1Open] = useState(false);
+    const [isProject2Open, setIsProject2Open] = useState(false);
+    const [isProject3Open, setIsProject3Open] = useState(false);
+    const [isProject4Open, setIsProject4Open] = useState(false);
+
+    const closeModal = (modalType) => {
+        if (isClosing) return;
+
+        setIsClosing(true);
+        setTimeout(() => {
+            if (modalType === 'project1') {
+                setIsProject1Open(false);
+            } else if (modalType === 'project2') {
+                setIsProject2Open(false);
+            } else if (modalType === 'project3') {
+                setIsProject3Open(false);
+            }else if (modalType === 'project4') {
+                setIsProject4Open(false);
+            }
+            setIsClosing(false);
+        }, 1500);
+    };
 
     const commands = {
         ls: {
@@ -53,23 +81,59 @@ const Projects = () => {
 
         Project1:{
             description: 'Diabetic Retinopathy Detection',
+            fn: function () {
+                setTimeout(function () {
+                    setIsProject1Open(true);
+                }, 1200);
+                return 'One Convolutional Neural Net Project description coming right up...';
+            }
         },
 
         Project2:{
             description: 'Real Time Financial Data',
+            fn: function () {
+                setTimeout(function () {
+                    setIsProject2Open(true);
+                }, 1200);
+                return 'Fintech?.....';
+            }
         },
 
         Project3:{
             description: 'Robot Radar',
+            fn: function () {
+                setTimeout(function () {
+                    setIsProject3Open(true);
+                }, 1200);
+                return "Meep Morp Zeeep, Oh wait this is just a radar...";
+            }
         },
 
         Project4:{
-            description: 'Go to Main page',
+            description: 'Calibrated Peer Review Tool',
+            fn: function () {
+                setTimeout(function () {
+                    setIsProject4Open(true);
+                }, 1200);
+                return 'Can this be the next Brightspace?...';
+            }
         },
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Thhis is where you'll find some of my projects, Use 'cd' to go back to main">
+        <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
+            {isProject1Open && !isAnimatingClose && !isClosing && (
+                <DBRModal isOpen={isProject1Open} onClose={() => closeModal('cps')} />
+            )}
+            {isProject2Open && !isAnimatingClose && !isClosing && (
+                <RealTimeModal isOpen={isProject2Open} onClose={() => closeModal('motionCapture')} />
+            )}
+            {isProject3Open && !isAnimatingClose && !isClosing && (
+                <RobotModal isOpen={isProject3Open} onClose={() => closeModal('internationalTrade')} />
+            )}
+            {isProject4Open && !isAnimatingClose && !isClosing && (
+                <CPRModal isOpen={isProject4Open} onClose={() => closeModal('internationalTrade')} />
+            )}
         </Layout>
     );
 };

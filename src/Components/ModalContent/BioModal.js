@@ -67,5 +67,5 @@ const BioModal = ({ isOpen, onClose }) => {
         </div>
     );
 };
-
 export default BioModal;
+
