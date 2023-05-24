@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../Components/Layout';
+import Layout from '../Components/Page Layout/Layout';
 import '../Styles/styles.css';
-import ResumeModal from '../Components/ModalContent/ResumeModal';
-import BioModal from '../Components/ModalContent/BioModal';
+import { BioModal, ResumeModal } from "../Components/About Page/AboutModal";
+
 
 const About = () => {
     const navigate = useNavigate();

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../Components/Layout';
-import DBRModal from "../Components/ModalContent/DBRModal";
-import RobotModal from "../Components/ModalContent/RobotModal";
-import RealTimeModal from "../Components/ModalContent/RealTimeModal";
-import CPRModal from "../Components/ModalContent/CPRModal";
+import Layout from '../Components/Page Layout/Layout';
+import DBRModal from "../Components/Project Page/ProjectsModal";
+import RobotModal from "../Components/Project Page/RobotModal";
+import RealTimeModal from "../Components/Project Page/RealTimeModal";
+import CPRModal from "../Components/Project Page/CPRModal";
 
 const Projects = () => {
     const navigate = useNavigate();

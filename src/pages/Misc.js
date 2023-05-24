@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../Components/Layout';
+import Layout from '../Components/Page Layout/Layout';
 
 const Misc = () => {
     const navigate = useNavigate();

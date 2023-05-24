@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../Components/Layout';
-import { CPSModal, FreeMoCapModal, InternationalTradeModal } from "../Components/ModalContent/ResearchModals";
+import Layout from '../Components/Page Layout/Layout';
+import { CPSModal, FreeMoCapModal, InternationalTradeModal } from "../Components/Research Page/ResearchModal";
 
 const Research = () => {
     const navigate = useNavigate();
