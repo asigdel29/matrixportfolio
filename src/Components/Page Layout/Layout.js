@@ -1,10 +1,13 @@
 import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
 import React, { useState, useEffect } from 'react';
+import Styles from './styles.css';
 
 const Layout = ({ commands, children, welcomeMessage }) => {
     const [dynamicWelcome, setDynamicWelcome] = useState('');
+    const [isInputAllowed, setInputAllowed] = useState(false);
     const welcomeText = welcomeMessage.split('');
+    //const terminalRef = useRef(null);
 
     useEffect(() => {
         let messageIndex = 0;
@@ -13,12 +16,19 @@ const Layout = ({ commands, children, welcomeMessage }) => {
                 setDynamicWelcome((prev) => prev + welcomeText[messageIndex]);
                 messageIndex++;
             } else {
+                setInputAllowed(true);
                 clearInterval(welcomeMessageInterval);
+                setTimeout(() => {
+                    const terminal = document.getElementById('myConsole');
+                    const terminalInput = terminal && terminal.getElementsByClassName('terminalInput');
+                    terminalInput && terminalInput[0] && terminalInput[0].focus();
+                }, 1000);
             }
         }, 45);
 
         return () => clearInterval(welcomeMessageInterval);
     }, [welcomeMessage]);
+
 
     const terminalStyle = {
         backgroundColor: '#000000a1',
@@ -73,17 +83,20 @@ const Layout = ({ commands, children, welcomeMessage }) => {
                 <p style={{ color: '#00FF00', fontFamily: 'monospace', fontSize: '15px' }}>
                     {dynamicWelcome.replace('undefined', '')}
                 </p>
-
-                <Console
-                    commands={commands}
-                    autoFocus={true}
-                    style={terminalStyle}
-                    contentStyle={terminalinput}
-                    inputAreaStyle={terminalinputStyle}
-                    promptLabelStyle={terminaltext}
-                    inputTextStyle={inputstyle}
-                    promptLabel={'Anu@Matrix:~$'}
-                />
+                <div className={isInputAllowed ? "fadingIn" : ""}>
+                    <Console
+                        id="myConsole"
+                        commands={commands}
+                        autoFocus={isInputAllowed}
+                        readOnly={!isInputAllowed}
+                        style={terminalStyle}
+                        contentStyle={terminalinput}
+                        inputAreaStyle={terminalinputStyle}
+                        promptLabelStyle={terminaltext}
+                        inputTextStyle={inputstyle}
+                        promptLabel={'Anu@Matrix:~$'}
+                    />
+                </div>
             </div>
             {children}
         </div>
