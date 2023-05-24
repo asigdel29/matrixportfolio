@@ -1,3 +1,4 @@
+const ResumeContent = `
 <pre>
                                    Anubhav Sigdel
 
@@ -116,3 +117,4 @@ Project Management: DevOps, Agile Development, Git, Kubernetes
 Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark
 </pre>
 `;
+export default ResumeContent;

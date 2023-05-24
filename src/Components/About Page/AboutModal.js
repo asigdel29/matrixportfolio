@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import BioModalContent from './PageContent/BioContent.html';
-import ResumeModalContent from './PageContent/ResumeContent.html';
+import BioModalContent from './PageContent/BioContent';
+import ResumeModalContent from './PageContent/ResumeContent';
 
 const ModalComponent = ({ isOpen, onClose, modalText }) => {
     const [visibleText, setVisibleText] = useState('');

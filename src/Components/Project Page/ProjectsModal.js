@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import DBRModalContent from './PageContent/DBRContent.html';
-import RealTimeModalContent from './PageContent/RealTimeContent.html';
-import RobotRadarModalContent from './PageContent/RobotRadarContent.html';
-import CPRModalContent from './PageContent/CPRContent.html';
+import DBRModalContent from './PageContent/DBRContent';
+import RealTimeModalContent from './PageContent/RealTimeContent';
+import RobotRadarModalContent from './PageContent/RobotRadarContent';
+import CPRModalContent from './PageContent/CPRContent';
 
 const ModalComponent = ({ isOpen, onClose, modalText }) => {
     const [visibleText, setVisibleText] = useState('');

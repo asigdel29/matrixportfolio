@@ -1,3 +1,4 @@
+const bioContent = `
 <p>As an international student from Nepal with a bachelors double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.</p>
 
 <p>I am currently pursuing a Masters in Science in BioMedical Health Informatics.</p>
@@ -16,3 +17,6 @@
   <li>Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous deployment (CI/CD)</li>
   <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
 </ul>
+    `;
+
+export default bioContent;

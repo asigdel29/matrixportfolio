@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import cpsModalContent from './PageContent/cpsModalContent.html';
-import freeMoCapModalContent from './PageContent/freeMoCapModalContent.html';
-import internationalTradeModalContent from './PageContent/internationalTradeModalContent.html';
+import cpsModalContent from './PageContent/cpsModalContent';
+import freeMoCapModalContent from './PageContent/freeMoCapModalContent';
+import internationalTradeModalContent from './PageContent/internationalTradeModalContent';
 
 const ModalComponent = ({ isOpen, onClose, modalText }) => {
     const [visibleText, setVisibleText] = useState('');
