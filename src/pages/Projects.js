@@ -17,13 +17,13 @@ const Projects = () => {
 
         setIsClosing(true);
         setTimeout(() => {
-            if (modalType === 'project1') {
+            if (modalType === 'dbr') {
                 setIsDBRModalOpen(false);
-            } else if (modalType === 'project2') {
+            } else if (modalType === 'radar') {
                 setIsRobotRadarModalOpen(false);
-            } else if (modalType === 'project3') {
+            } else if (modalType === 'realtime') {
                 setIsRealTimeModalOpen(false);
-            }else if (modalType === 'project4') {
+            } else if (modalType === 'cpr') {
                 setIsCPRModalOpen(false);
             }
             setIsClosing(false);
@@ -34,7 +34,7 @@ const Projects = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'Project 1\nProject 2\nProject 3\nProject4';
+                return 'CPR\nLuminex\nFinTrack\nRoboScan';
             }
         },
 
@@ -76,7 +76,7 @@ const Projects = () => {
             }
         },
 
-        Project1:{
+        Luminex:{
             description: 'Diabetic Retinopathy Detection',
             fn: function () {
                 setTimeout(function () {
@@ -86,7 +86,7 @@ const Projects = () => {
             }
         },
 
-        Project2:{
+        FinTrack:{
             description: 'Real Time Financial Data',
             fn: function () {
                 setTimeout(function () {
@@ -96,7 +96,7 @@ const Projects = () => {
             }
         },
 
-        Project3:{
+        RoboScan:{
             description: 'Robot Radar',
             fn: function () {
                 setTimeout(function () {
@@ -106,7 +106,7 @@ const Projects = () => {
             }
         },
 
-        Project4:{
+        CPR:{
             description: 'Calibrated Peer Review Tool',
             fn: function () {
                 setTimeout(function () {
@@ -119,17 +119,17 @@ const Projects = () => {
 
     return (
         <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
-            {isDBRModalOpen && !isAnimatingClose && !isClosing && (
-                <DBRModal isOpen={isDBRModalOpen} onClose={() => closeModal('cps')} />
+            {isDBRModalOpen && !isClosing && (
+                <DBRModal isOpen={isDBRModalOpen} onClose={() => closeModal('dbr')} />
             )}
-            {isRealTimeModalOpen && !isAnimatingClose && !isClosing && (
-                <RealTimeModal isOpen={isRealTimeModalOpen} onClose={() => closeModal('motionCapture')} />
+            {isRealTimeModalOpen && !isClosing && (
+                <RealTimeModal isOpen={isRealTimeModalOpen} onClose={() => closeModal('realtime')} />
             )}
-            {isRobotRadarModalOpen && !isAnimatingClose && !isClosing && (
-                <RobotRadarModal isOpen={isRobotRadarModalOpen} onClose={() => closeModal('internationalTrade')} />
+            {isRobotRadarModalOpen && !isClosing && (
+                <RobotRadarModal isOpen={isRobotRadarModalOpen} onClose={() => closeModal('radar')} />
             )}
-            {isCPRModalOpen && !isAnimatingClose && !isClosing && (
-                <CPRModal isOpen={isCPRModalOpen} onClose={() => closeModal('internationalTrade')} />
+            {isCPRModalOpen && !isClosing && (
+                <CPRModal isOpen={isCPRModalOpen} onClose={() => closeModal('cpr')} />
             )}
         </Layout>
     );

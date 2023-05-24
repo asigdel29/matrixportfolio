@@ -42,6 +42,7 @@ const ModalComponent = ({ isOpen, onClose, modalText }) => {
     return (
         <div className={isOpen ? 'modal open' : 'modal'}>
             <div className="modal-content">
+                {/*<img src="./PageContent/CPRTool.png?timestamp=123456789"/>*/}
                 <span className="close" onClick={onClose}>
                     &times;
                 </span>
