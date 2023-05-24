@@ -1,19 +1,16 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Page Layout/Layout';
-import DBRModal from "../Components/Project Page/ProjectsModal";
-import RobotModal from "../Components/Project Page/RobotModal";
-import RealTimeModal from "../Components/Project Page/RealTimeModal";
-import CPRModal from "../Components/Project Page/CPRModal";
+import { DBRModal, RobotRadarModal, RealTimeModal, CPRModal } from "../Components/Project Page/ProjectsModal";
 
 const Projects = () => {
     const navigate = useNavigate();
     const [isAnimatingClose, setIsAnimatingClose] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-    const [isProject1Open, setIsProject1Open] = useState(false);
-    const [isProject2Open, setIsProject2Open] = useState(false);
-    const [isProject3Open, setIsProject3Open] = useState(false);
-    const [isProject4Open, setIsProject4Open] = useState(false);
+    const [isDBRModalOpen, setIsDBRModalOpen] = useState(false);
+    const [isRobotRadarModalOpen, setIsRobotRadarModalOpen] = useState(false);
+    const [isRealTimeModalOpen, setIsRealTimeModalOpen] = useState(false);
+    const [isCPRModalOpen, setIsCPRModalOpen] = useState(false);
 
     const closeModal = (modalType) => {
         if (isClosing) return;
@@ -21,13 +18,13 @@ const Projects = () => {
         setIsClosing(true);
         setTimeout(() => {
             if (modalType === 'project1') {
-                setIsProject1Open(false);
+                setIsDBRModalOpen(false);
             } else if (modalType === 'project2') {
-                setIsProject2Open(false);
+                setIsRobotRadarModalOpen(false);
             } else if (modalType === 'project3') {
-                setIsProject3Open(false);
+                setIsRealTimeModalOpen(false);
             }else if (modalType === 'project4') {
-                setIsProject4Open(false);
+                setIsCPRModalOpen(false);
             }
             setIsClosing(false);
         }, 1500);
@@ -83,7 +80,7 @@ const Projects = () => {
             description: 'Diabetic Retinopathy Detection',
             fn: function () {
                 setTimeout(function () {
-                    setIsProject1Open(true);
+                    setIsDBRModalOpen(true);
                 }, 1200);
                 return 'One Convolutional Neural Net Project description coming right up...';
             }
@@ -93,7 +90,7 @@ const Projects = () => {
             description: 'Real Time Financial Data',
             fn: function () {
                 setTimeout(function () {
-                    setIsProject2Open(true);
+                    setIsRealTimeModalOpen(true);
                 }, 1200);
                 return 'Fintech?.....';
             }
@@ -103,9 +100,9 @@ const Projects = () => {
             description: 'Robot Radar',
             fn: function () {
                 setTimeout(function () {
-                    setIsProject3Open(true);
+                    setIsRobotRadarModalOpen(true);
                 }, 1200);
-                return "Meep Morp Zeeep, Oh wait this is just a radar...";
+                return "Hold your horses...";
             }
         },
 
@@ -113,26 +110,26 @@ const Projects = () => {
             description: 'Calibrated Peer Review Tool',
             fn: function () {
                 setTimeout(function () {
-                    setIsProject4Open(true);
+                    setIsCPRModalOpen(true);
                 }, 1200);
-                return 'Can this be the next Brightspace?...';
+                return 'Can this be the next BrightSpace?...';
             }
         },
     };
 
     return (
         <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
-            {isProject1Open && !isAnimatingClose && !isClosing && (
-                <DBRModal isOpen={isProject1Open} onClose={() => closeModal('cps')} />
+            {isDBRModalOpen && !isAnimatingClose && !isClosing && (
+                <DBRModal isOpen={isDBRModalOpen} onClose={() => closeModal('cps')} />
             )}
-            {isProject2Open && !isAnimatingClose && !isClosing && (
-                <RealTimeModal isOpen={isProject2Open} onClose={() => closeModal('motionCapture')} />
+            {isRealTimeModalOpen && !isAnimatingClose && !isClosing && (
+                <RealTimeModal isOpen={isRealTimeModalOpen} onClose={() => closeModal('motionCapture')} />
             )}
-            {isProject3Open && !isAnimatingClose && !isClosing && (
-                <RobotModal isOpen={isProject3Open} onClose={() => closeModal('internationalTrade')} />
+            {isRobotRadarModalOpen && !isAnimatingClose && !isClosing && (
+                <RobotRadarModal isOpen={isRobotRadarModalOpen} onClose={() => closeModal('internationalTrade')} />
             )}
-            {isProject4Open && !isAnimatingClose && !isClosing && (
-                <CPRModal isOpen={isProject4Open} onClose={() => closeModal('internationalTrade')} />
+            {isCPRModalOpen && !isAnimatingClose && !isClosing && (
+                <CPRModal isOpen={isCPRModalOpen} onClose={() => closeModal('internationalTrade')} />
             )}
         </Layout>
     );
