@@ -12,12 +12,6 @@ const Projects = () => {
     const [isRealTimeModalOpen, setIsRealTimeModalOpen] = useState(false);
     const [isCPRModalOpen, setIsCPRModalOpen] = useState(false);
 
-    function createGithubLink() {
-        const linkText = 'Github';
-        const linkURL = 'https://github.com/asigdel29';
-
-        return `<a href="${linkURL}">${linkText}</a>`;
-    }
     const closeModal = (modalType) => {
         if (isClosing) return;
 

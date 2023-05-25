@@ -1,13 +1,12 @@
 import MatrixRain from './MatrixRain';
 import Console from 'react-console-emulator';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import Styles from './styles.css';
 
 const Layout = ({ commands, children, welcomeMessage }) => {
     const [dynamicWelcome, setDynamicWelcome] = useState('');
     const [isInputAllowed, setInputAllowed] = useState(false);
     const welcomeText = welcomeMessage.split('');
-    //const terminalRef = useRef(null);
 
     useEffect(() => {
         let messageIndex = 0;
@@ -20,15 +19,13 @@ const Layout = ({ commands, children, welcomeMessage }) => {
                 clearInterval(welcomeMessageInterval);
                 setTimeout(() => {
                     const terminal = document.getElementById('myConsole');
-                    const terminalInput = terminal && terminal.getElementsByClassName('terminalInput');
-                    terminalInput && terminalInput[0] && terminalInput[0].focus();
-                }, 1000);
+                    terminal && terminal.click();
+                }, 4000);
             }
         }, 45);
 
         return () => clearInterval(welcomeMessageInterval);
     }, [welcomeMessage]);
-
 
     const terminalStyle = {
         backgroundColor: '#000000a1',
@@ -86,7 +83,6 @@ const Layout = ({ commands, children, welcomeMessage }) => {
                 <div className={isInputAllowed ? "fadingIn" : ""}>
                     <Console
                         id="myConsole"
-                        //ref={terminalRef}
                         commands={commands}
                         autoFocus={isInputAllowed}
                         readOnly={!isInputAllowed}
