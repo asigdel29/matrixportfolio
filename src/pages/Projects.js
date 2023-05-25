@@ -12,6 +12,12 @@ const Projects = () => {
     const [isRealTimeModalOpen, setIsRealTimeModalOpen] = useState(false);
     const [isCPRModalOpen, setIsCPRModalOpen] = useState(false);
 
+    function createGithubLink() {
+        const linkText = 'Github';
+        const linkURL = 'https://github.com/asigdel29';
+
+        return `<a href="${linkURL}">${linkText}</a>`;
+    }
     const closeModal = (modalType) => {
         if (isClosing) return;
 
@@ -118,8 +124,8 @@ const Projects = () => {
     };
 
     return (
-        <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff done with professors. Use 'cd' to go back to the main page.">
-            {isDBRModalOpen && !isClosing && (
+        <Layout commands={commands} welcomeMessage="Ennter command 'ls' to see some cool stuff I built. Use 'cd' to go back to the main page." >
+    {isDBRModalOpen && !isClosing && (
                 <DBRModal isOpen={isDBRModalOpen} onClose={() => closeModal('dbr')} />
             )}
             {isRealTimeModalOpen && !isClosing && (

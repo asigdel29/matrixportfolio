@@ -86,6 +86,7 @@ const Layout = ({ commands, children, welcomeMessage }) => {
                 <div className={isInputAllowed ? "fadingIn" : ""}>
                     <Console
                         id="myConsole"
+                        //ref={terminalRef}
                         commands={commands}
                         autoFocus={isInputAllowed}
                         readOnly={!isInputAllowed}

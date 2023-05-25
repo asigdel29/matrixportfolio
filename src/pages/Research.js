@@ -39,7 +39,7 @@ const Research = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'Project1\nProject2\nProject3';
+                return 'CPS\nMotionCapture\nDataAnalysis';
             }
         },
         about: {
@@ -80,7 +80,7 @@ const Research = () => {
             }
         },
 
-        Project1: {
+        CPS: {
             description: 'Research Project for Cyber Physical Systems Lab',
             fn: function () {
                 setTimeout(function () {
@@ -90,7 +90,7 @@ const Research = () => {
             }
         },
 
-        Project2: {
+        MotionCapture: {
             description: 'Research Project for Cognitive Dynamics Lab',
             fn: function () {
                 setTimeout(function () {
@@ -100,7 +100,7 @@ const Research = () => {
             }
         },
 
-        Project3: {
+        DataAnalysis: {
             description: 'Research Project for School of Business',
             fn: function () {
                 setTimeout(function () {
