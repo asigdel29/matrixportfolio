@@ -9,7 +9,7 @@ const Misc = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'Misc Project 1\nMisc Project 2\nMisc Project 3';
+                return 'Not organized , so not for public view (yet)';
             }
         },
 
