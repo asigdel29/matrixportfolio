@@ -7,7 +7,6 @@ import CPRImage from './PageContent/CPR1.png';
 import CPRImage2 from './PageContent/CPR2.png';
 
 
-
 const ModalComponent = ({ isOpen, onClose, modalText, imageSrcs }) => {
     const [visibleText, setVisibleText] = useState('');
     const [typingIndex, setTypingIndex] = useState(0);
@@ -62,5 +61,4 @@ const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalConten
 const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
 const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} imageSrcs={[CPRImage, CPRImage2]} />;
-
 export {DBRModal,RobotRadarModal,RealTimeModal,CPRModal};
