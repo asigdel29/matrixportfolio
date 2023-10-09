@@ -1,120 +1,117 @@
 const ResumeContent = `
 <pre>
-                                   Anubhav Sigdel
+                              Anubhav Sigdel
 
-New York | +1-315-806-4832 | Email -asigdel@oswego.edu | HackerRank - asigdel
+New York | Email sigdelanubhav@gmail.com | LinkedIn - asigdel
+Github - asigdel29 | HackerRank - asigdel | Portfolio - https://anubhavsigdel.vercel.app/
 
 EDUCATION
 State University of New York Oswego, NY
 Bachelors in Computer Science and Cognitive Science
 August 2019-May 2023
+● Destination Oswego Scholarship, President’s List, Dean’s List
 
 State University of New York Oswego, NY
-Masters in Science in Biomedical and Health Informatics
-August 2023-May 2024
+Masters of Science in Biomedical and Health Informatics
+August 2023-December 2024
+● Concentration - Data Science
 
-WORK EXPERIENCE:
+PROJECT EXPERIENCE
+Teacher Attendance Monitoring System
+Role: Software Engineer Intern
+Collaboration: Collaborated with IPE Global on a World Bank-funded initiative.
+Design & Development: Spearheaded the creation of a comprehensive Attendance Monitoring System.
+Technologies Used: Integrated AWS facial recognition, complemented by geo-fencing, and multi-factor
+authentication, into both a mobile and web application.
+Software QA: Conducted thorough requirement analysis, designed test cases, and performed both manual and
+automated testing. Engaged in system, integration, and user acceptance testing to ensure system robustness.
+Adopted continuous integration tools for real-time bug tracking and reporting.
 
-Collimation Los Angeles, CA
-Game Developer Intern May 2022 - August 2022
-● Utilized C++ to create prototypes based on design team specifications
-● Implemented music driven locomotion for FPS game in Unreal Engine to develop challenging
-and engaging third person shooter game; used AWS EC2 virtual instance for team collaboration
-● Collaborated with the Creative and Immersive teams to incorporate design features into
-recreational games prior to market release
+FPS Game (Untitled)
+Role: Game Developer Intern
+Collaboration: Collimation (VR Startup)
+Objective: Develop a multi-dimensional gaming experience allowing users to immerse in virtual concerts and
+engage with their favorite artists through Virtual Reality (VR) and Augmented Reality (AR).
+Technologies & Tools:
+Languages: C++ for prototype development.
+Game Engine: Unreal Engine for game design and music-driven locomotion.
+Cloud Computing: Utilized AWS EC2 virtual instances to foster real-time team collaboration.
+VR/AR: Incorporated immersive experiences enabling users to attend live concerts virtually or bring AR concerts
+to their mobile devices.
+Key Responsibilities & Achievements:
+● Spearheaded the development of game prototypes aligning with design team's specifications.
+● Successfully introduced a music-driven locomotion mechanism, elevating the third-person shooter
+gameplay experience.
+● Closely collaborated with the Creative and Immersive teams, playing a pivotal role in assimilating design
+features into games, ensuring readiness before market launch.
 
-Cyber Physical Systems Lab - SUNY Oswego, NY
-Research Assistant November 2022 - Present
-● Implemented a Collaborative Automotive Cyber-Physical System using BeamNG.tech
-● Simulated a Cooperative Adaptive Cruise Control system wherein the cars negotiate speed
-to form and coordinate platoons.
-
-Cognitive Dynamics Lab - SUNY Oswego, NY
-Research Assistant August 2021 - May 2023
-● Engineered a research-grade markerless motion capture program using OpenPose, DeepLabCut
-for data collection; Calibrated software accuracy to 99.3% via Charuco Boards.
-● Streamlined the data collection processes using Python to automate the data collection
-process by developing custom scripts in Python;increasing efficiency by up 25%.
-● Conducted study by using motion capture to study Free Recall for expressing search and
-retrieve process to find out how the search and retrieve process within our brains
-alter when given the same task multiple times.
-
-School of Business, SUNY Oswego, NY
-Data Analyst - International Trade Project December 2022 - May 2023
-● Leverage expertise in data acquisition and organization to generate actionable
-insights and develop innovative data visualization strategies.
-● Utilize Python, Tableau, and Gephi to conduct complex data analyses and present
-compelling visual representations of findings.
-
-PROJECT EXPERIENCE:
+FARE (Freelance Activities & Relations Ecosystem)
+Role: Full Stack Developer
+Technologies & Tools:
+Frontend/Backend Development: Java, JavaScript(React)
+Database: MongoDB
+Cloud & Hosting: Amazon Web Services
+Others: Version Control: Git, Containerization: Docker
+Key Responsibilities & Achievements:
+● Ideated, conceptualized, and brought to fruition the FARE platform as the sole developer and founder.
+● Successfully eliminated manual invoicing processes by integrating smart contracts, ensuring the
+automation of agreement and payment stages.
+● Spearheaded the implementation of a robust escrow system, bolstering security and fostering trust among
+platform users.
 
 Calibrated Peer Review Tool
-Software Design
-● Leveraged expertise in backend development to design, develop and deploy key features.
-● Collaborated with IBM to successfully deliver the calibrated peer review tool,
-which is currently being used by students and faculty members.
-● Utilized Agile methodologies to manage and prioritize tasks, ensuring timely delivery.
-● Documented technical requirements and specifications for the tool, enabling
-efficient communication between cross-functional teams.
+Role: Full Stack Developer
+Collaboration: In collaboration with IBM stakeholders
+Challenge: Enhance backend functionalities of an educational tool to bolster its usability and drive its adoption
+among students and faculty.
+Technologies & Tools Used:
+Languages & Frameworks: Java, JavaScript, React
+Microservice Architecture: Developed independent services using Open Liberty and Nginx.
+Deployment: Containerized applications using Docker for consistent deployment.
+Database: Managed and organized data with MongoDB.
+Testing: Employed Junit and Selenium for unit and integration testing. Used Postman for API endpoint testing.
+Project Management & Collaboration: Adopted Agile methodologies and utilized Trello for task tracking.
+Documentation: Created detailed technical requirements and specifications.
+Outcome: Successfully launched the Calibrated Peer Review Tool, with enthusiastic adoption by students and
+faculty.
 
-Robot Radar
-Software Engineering
-● Designed and constructed a radar application for Pi robots through
-agile software development methodology
-● Programmed radar in Python to collect LIDAR sensor readings using
-trigonometric computations to calculate target coordinates with an accuracy of 95%
+RESEARCH EXPERIENCE
+Cyber Physical Systems Lab - SUNY Oswego, NY
+Research Assistant
+November 2022 - Present
+● Tasked with enhancing the realism of autonomous vehicle research tools, simulated autonomous vehicle
+functionality through an Automotive Cyber Physical System using BeamNG.tech, providing a more
+immersive testing environment.
+● With the aim of showcasing advanced collision avoidance capabilities, designed a Collaborative Automotive
+Calibrated Cruise Control system using BeamNG.py, resulting in a demonstration of a Traffic Collision
+Avoidance System for the entire network.
 
-RCCA and Hyundai Smart Trunk System
-Software and Safety Requirements Engineering
-● Applied agile methodologies for election, documentation and management of
-natural language-based and model-based requirements in order to address safety-critical
-life cycle concerns of Hyundai Saint Jose
-● Performed FMEA and other analysis on the Smart Trunk System including safety analysis,
-quality assurance, failure mode and effective analysis and functional hazard analysis
+Cognitive Dynamics Lab - SUNY Oswego, NY
+Research Assistant
+August 2021 - May 2023
+● Charged with improving motion capture precision for research applications, engineered a markerless motion
+capture program using OpenPose and DeepLabCut. This achieved a calibration accuracy of 99.3% with
+Charuco Boards, ensuring near-perfect motion data capture for our research studies.
+● To optimize our lab's data collection procedures, streamlined and automated the process by creating custom
+Python scripts, resulting in a notable efficiency increase of up to 25% in
 
-Diabetic Retinopathy Detection
-Machine Learning
-● Engineered a convolutional neural network model on a large set of high-resolution
-retina images taken under a variety of imaging conditions to train and predict
-diabetic retinopathy from retina images
-● Implemented an algorithm for image preprocessing; increasing accuracy from 79% to 87%
-and reducing training time by 1 hour
-
-Real Time Financial Data API
-Software Deployment
-● Successfully deployed a REST API in Go. Utilizing Postman, Loggly, Docker
-and a suite of AWS products to host and manage data from Alethia API including
-Simple Storage Service (S3), Codebuild, ECR, and Fargate
-
-LEADERSHIP EXPERIENCE
-
-Computer Science Association Oswego, NY
-President May 2022 - May 2023
-● Trained junior officers and delegated tasks
-● Maintained communication with the Student board
-● Organized and judged the regional ACM programming competition.
-
-Cognitive Science Association Oswego, NY
-President May 2022 - December 2022
-● Implemented and maintained a new streamlined method through which members signed up and
-communicated within the organization.
-● Organized and led course specific review sessions for fellow members.
-
-Focus Forward Oswego, NY
-Student Mentor and Team Leader January 2020-December 2021
-● Counseled students individually and in group sessions to promote educational motivation.
-● Mentored and guided fellow team members to foster proper completion of assigned tasks.
+Data Analyst - School of Business Oswego, NY
+December 2022- May 2023
+● Employed proficiency in data acquisition and organization techniques to extract valuable insights,
+informing business decisions and strategic planning.
+● Skillfully harnessed tools like Python, Tableau, and Gephi to perform intricate data analyses, and
+subsequently translated results into engaging and comprehensible visual representations.
 
 SKILLS & INTERESTS
-
-Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations,
-IBM Applied Data Science Specialization
-
-Languages: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, CSS,
-Technologies : AWS, Docker, React, Angular,
-Data Analytics: SQL, R, NoSQL, Tableau, Excel
+Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations, IBM Applied
+Data Science Specialization
+Computer Science: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, AWS, Docker, React, Angular, CSS,
+Computer Networking
+Data Analytics: SQL, R, NoSQL, Tableau, Excel, R
 Project Management: DevOps, Agile Development, Git, Kubernetes
 Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark
+
 </pre>
 `;
+
 export default ResumeContent;
