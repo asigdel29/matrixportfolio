@@ -6,3 +6,7 @@
 .fadingIn {
     animation: fadeIn 1s ease-in-out forwards;
 }
+
+body, html, #root, .App {
+    height: 100%;
+}
