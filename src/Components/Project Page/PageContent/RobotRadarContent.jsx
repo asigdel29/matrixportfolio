@@ -28,11 +28,6 @@ This project was realized in cooperation with Bastian Tenbergen. It required not
 <p>
 For a closer look into the technicalities and codebase, you can visit the repository: <a href="https://github.com/asigdel29/RobotRadar" style="color: #00FF00; text-decoration: underline;">GitHub</a>.
 </p>
-
-<p>
-<img src="./path_to_first_image.jpg" alt="Robot Radar Image 1" />
-<img src="./path_to_second_image.jpg" alt="Robot Radar Image 2" />
-</p>
 `;
 
 export default RobotRadarContent;
