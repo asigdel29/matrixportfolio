@@ -1,7 +1,5 @@
 const bioContent = `
-<p>As an international student from Nepal with a bachelors double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.</p>
-
-<p>I am currently pursuing a Masters in Science in BioMedical Health Informatics.</p>
+<p>As an international student from Nepal pursuing a double major in computer science and cognitive science, I have always been fascinated by the intersection of technology and the human mind. This curiosity led me to pursue a career in software engineering, where I can apply my technical and cognitive skills to solve real-world problems.</p>
 
 <p>I have developed a wide variety of skills from my previous internship, research assistantships, and academic studies. During my undergraduate studies, I had the opportunity to work on several projects that allowed me to develop my programming skills and gain a deeper understanding of computational systems. I also had the opportunity to intern at a startup company, where I learned the importance of teamwork and effective communication in the software development process.</p>
 
@@ -17,6 +15,6 @@ const bioContent = `
   <li>Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous deployment (CI/CD)</li>
   <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
 </ul>
-    `;
+`;
 
 export default bioContent;
