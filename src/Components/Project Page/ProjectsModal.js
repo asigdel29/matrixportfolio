@@ -3,8 +3,12 @@ import DBRModalContent from './PageContent/DBRContent';
 import RealTimeModalContent from './PageContent/RealTimeContent';
 import RobotRadarModalContent from './PageContent/RobotRadarContent';
 import CPRModalContent from './PageContent/CPRContent';
+import CPRImage from './PageContent/CPR1.png';
+import CPRImage2 from './PageContent/CPR2.png';
 
-const ModalComponent = ({ isOpen, onClose, modalText }) => {
+
+
+const ModalComponent = ({ isOpen, onClose, modalText, imageSrcs }) => {
     const [visibleText, setVisibleText] = useState('');
     const [typingIndex, setTypingIndex] = useState(0);
     const typingSpeed = 8;
@@ -42,10 +46,12 @@ const ModalComponent = ({ isOpen, onClose, modalText }) => {
     return (
         <div className={isOpen ? 'modal open' : 'modal'}>
             <div className="modal-content">
-                {/*<img src="./PageContent/CPRTool.png?timestamp=123456789"/>*/}
+                {imageSrcs.map((src, index) => (
+                    <img key={index} src={src} alt={`Modal content ${index}`} />
+                ))}
                 <span className="close" onClick={onClose}>
-                    &times;
-                </span>
+                &times;
+            </span>
                 <div dangerouslySetInnerHTML={{ __html: visibleText }}></div>
             </div>
         </div>
@@ -55,6 +61,6 @@ const ModalComponent = ({ isOpen, onClose, modalText }) => {
 const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalContent} />;
 const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
-const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} />;
+const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} imageSrcs={[CPRImage, CPRImage2]} />;
 
 export {DBRModal,RobotRadarModal,RealTimeModal,CPRModal};
