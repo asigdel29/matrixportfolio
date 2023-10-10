@@ -3,11 +3,13 @@ import DBRModalContent from './PageContent/DBRContent';
 import RealTimeModalContent from './PageContent/RealTimeContent';
 import RobotRadarModalContent from './PageContent/RobotRadarContent';
 import CPRModalContent from './PageContent/CPRContent';
+import TeacherAttendanceMonitoringSystemContent from './PageContent/TeacherAttendanceMonitoringSystemContent';
+import FPSGameContent from './PageContent/FPSGameContent';
+import FAREContent from './PageContent/FAREContent';
 import CPRImage from './PageContent/CPR1.png';
 import CPRImage2 from './PageContent/CPR2.png';
 import robotRadarImage1 from './PageContent/topview.png';
 import robotRadarImage2 from './PageContent/radarGUI.png';
-
 
 const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
     const [visibleText, setVisibleText] = useState('');
@@ -55,8 +57,6 @@ const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
                     &times;
                 </span>
                 <div dangerouslySetInnerHTML={{ __html: visibleText }}></div>
-
-                {/* Conditional rendering of images */}
                 {images && images.map((img, idx) => (
                     <img key={idx} src={img} alt={`Modal Image ${idx + 1}`} />
                 ))}
@@ -69,4 +69,8 @@ const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalConten
 const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} images={[robotRadarImage1, robotRadarImage2]} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
 const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} images={[CPRImage, CPRImage2]} />;
-export {DBRModal,RobotRadarModal,RealTimeModal,CPRModal};
+const TeacherAttendanceModal = (props) => <ModalComponent {...props} modalText={TeacherAttendanceMonitoringSystemContent} />;
+const FPSGameModal = (props) => <ModalComponent {...props} modalText={FPSGameContent} />;
+const FAREModal = (props) => <ModalComponent {...props} modalText={FAREContent} />;
+
+export { DBRModal, RobotRadarModal, RealTimeModal, CPRModal, TeacherAttendanceModal, FPSGameModal, FAREModal };
