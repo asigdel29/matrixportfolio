@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import repoContent from './Page Content/Repo'; // Assuming you've stored the content in these files
+import repoContent from './Page Content/Repo';
 import cogsciContent from './Page Content/CogSci';
 import sweContent from './Page Content/SWE';
 
