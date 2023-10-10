@@ -1,5 +1,5 @@
 const cpsModalContent = `
-<p>As a researcher at the Cyber Physical Systems Lab SUNY Oswego, I developed a Collaborative Adaptive Cruise Control (CACC) system...</p>
+<p>As a researcher at the Cyber Physical Systems Lab SUNY Oswego, I developed a Collaborative Adaptive Cruise Control (CACC) simulation...</p>
 <p>The simulation is divided into three phases to simulate Collaborative Adaptive Cruise Control behavior:</p>
 <ol>
   <li>Phase 1: Initiate</li>
