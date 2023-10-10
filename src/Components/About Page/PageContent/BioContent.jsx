@@ -5,8 +5,6 @@ const bioContent = `
 
 <p>Currently, I am looking for opportunities in software engineering. In my spare time, I enjoy solving coding challenges to further enhance my skills and stay up-to-date with the latest technologies. I am currently working on a calibrated peer review tool which functions as a highly scalable web application that assists the process of coordinating and evaluating peer reviews of student work.</p>
 
-<p>I am open to roles as a software engineer, data scientist, and machine learning engineer. If you have any questions or would like a copy of my resume, I'd love to connect!</p>
-
 <p>Skills Include:</p>
 <ul>
   <li>Certifications: AWS Academy Cloud Foundations, AWS Academy Cloud Security Foundations, IBM Applied Data Science Specialization</li>
