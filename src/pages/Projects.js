@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Page Layout/Layout';
-import { DBRModal, RobotRadarModal, RealTimeModal, CPRModal } from "../Components/Project Page/ProjectsModal";
+import { DBRModal, RobotRadarModal, RealTimeModal, CPRModal, TeacherAttendanceModal, FPSGameModal, FAREModal } from "../Components/Project Page/ProjectsModal";
 
 const Projects = () => {
     const navigate = useNavigate();
@@ -11,20 +11,37 @@ const Projects = () => {
     const [isRobotRadarModalOpen, setIsRobotRadarModalOpen] = useState(false);
     const [isRealTimeModalOpen, setIsRealTimeModalOpen] = useState(false);
     const [isCPRModalOpen, setIsCPRModalOpen] = useState(false);
+    const [isTeacherAttendanceModalOpen, setIsTeacherAttendanceModalOpen] = useState(false);
+    const [isFPSGameModalOpen, setIsFPSGameModalOpen] = useState(false);
+    const [isFAREModalOpen, setIsFAREModalOpen] = useState(false);
 
     const closeModal = (modalType) => {
         if (isClosing) return;
 
         setIsClosing(true);
         setTimeout(() => {
-            if (modalType === 'dbr') {
-                setIsDBRModalOpen(false);
-            } else if (modalType === 'radar') {
-                setIsRobotRadarModalOpen(false);
-            } else if (modalType === 'realtime') {
-                setIsRealTimeModalOpen(false);
-            } else if (modalType === 'cpr') {
-                setIsCPRModalOpen(false);
+            switch(modalType) {
+                case 'dbr':
+                    setIsDBRModalOpen(false);
+                    break;
+                case 'radar':
+                    setIsRobotRadarModalOpen(false);
+                    break;
+                case 'realtime':
+                    setIsRealTimeModalOpen(false);
+                    break;
+                case 'cpr':
+                    setIsCPRModalOpen(false);
+                    break;
+                case 'teacher':
+                    setIsTeacherAttendanceModalOpen(false);
+                    break;
+                case 'fps':
+                    setIsFPSGameModalOpen(false);
+                    break;
+                case 'fare':
+                    setIsFAREModalOpen(false);
+                    break;
             }
             setIsClosing(false);
         }, 1500);
@@ -115,6 +132,36 @@ const Projects = () => {
                 return 'Can this be the next BrightSpace?...';
             }
         },
+
+        TeacherAttendance: {
+            description: 'Teacher Attendance Monitoring System',
+            fn: function () {
+                setTimeout(function () {
+                    setIsTeacherAttendanceModalOpen(true);
+                }, 1200);
+                return 'Fetching details about Teacher Attendance Monitoring System...';
+            }
+        },
+
+        FPSGame: {
+            description: 'FPS Game (Untitled)',
+            fn: function () {
+                setTimeout(function () {
+                    setIsFPSGameModalOpen(true);
+                }, 1200);
+                return 'Fetching details about FPS Game...';
+            }
+        },
+
+        FARE: {
+            description: 'FARE (Freelance Activities & Relations Ecosystem)',
+            fn: function () {
+                setTimeout(function () {
+                    setIsFAREModalOpen(true);
+                }, 1200);
+                return 'Fetching details about FARE...';
+            }
+        },
     };
 
     return (
@@ -130,6 +177,15 @@ const Projects = () => {
             )}
             {isCPRModalOpen && !isClosing && (
                 <CPRModal isOpen={isCPRModalOpen} onClose={() => closeModal('cpr')} />
+            )}
+            {isTeacherAttendanceModalOpen && !isClosing && (
+                <TeacherAttendanceModal isOpen={isTeacherAttendanceModalOpen} onClose={() => closeModal('teacher')} />
+            )}
+            {isFPSGameModalOpen && !isClosing && (
+                <FPSGameModal isOpen={isFPSGameModalOpen} onClose={() => closeModal('fps')} />
+            )}
+            {isFAREModalOpen && !isClosing && (
+                <FAREModal isOpen={isFAREModalOpen} onClose={() => closeModal('fare')} />
             )}
         </Layout>
     );
