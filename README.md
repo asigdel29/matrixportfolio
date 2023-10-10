@@ -6,7 +6,10 @@ Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this r
 
 ### Terminal Emulator Experience
 
-https://github.com/asigdel29/portfolio/assets/64096825/ff45bd7d-ad2c-4965-a50f-5a45a49bad8a
+
+https://github.com/asigdel29/portfolio/assets/64096825/e3ca1b35-dd28-4a33-8a27-2256b456930f
+
+
 
 I've designed this portfolio to provide an immersive terminal emulator experience. The interactive terminal-like interface allows you to navigate through my work and discover my projects with ease. Feel free to use the provided commands to explore my portfolio and learn more about my journey as a developer.
 
