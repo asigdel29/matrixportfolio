@@ -1,7 +1,8 @@
 const DBRContent = `
-description:Using a convolutional neural network model, I engineered a system that can analyze high-resolution retina images taken under varying imaging conditions to accurately predict the presence of diabetic retinopathy. Through extensive training on a large and diverse dataset, the model achieved an exceptional accuracy rate of 87%.\n +
-To further optimize the system's performance, I implemented an algorithm for image preprocessing which not only increased the accuracy from 79% but also reduced the training time by one hour. This showcases my ability to not only design but also optimize a system to achieve high-performance standards.,
-repoLink: https://github.com/asigdel29/Diabetic-Retinopathy-Detection,
-    `;
+description: Diabetic retinopathy is a diabetes complication that affects the eyes. It's caused by damage to the blood vessels of the light-sensitive tissue at the back of the eye (retina). Early detection and appropriate treatment can prevent vision loss, making it crucial to have effective detection systems in place.\n\n
+To address this, I utilized machine learning, specifically leveraging the EfficientNet architecture, known for its efficiency and high performance in image classification tasks. Using a convolutional neural network based on the EfficientNet model, I designed a system tailored to accurately detect signs of diabetic retinopathy from high-resolution retina images, even those taken under varied imaging conditions. After extensive training on a comprehensive dataset, the model yielded an accuracy rate of 87%.\n\n
+To enhance the performance metrics further, I implemented an image preprocessing algorithm based on Quadratic Weighted Kappa. This enhancement improved the model's accuracy from an initial 79% and concurrently reduced the training duration by a notable hour. This endeavor embodies my ability to design, implement, and refine state-of-the-art machine learning solutions for critical medical challenges.\n\n
+Repository Link: [Diabetic Retinopathy Detection GitHub Repo](https://github.com/asigdel29/Diabetic-Retinopathy-Detection).
+`;
 
 export default DBRContent;
