@@ -6,7 +6,7 @@ Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this r
 
 ### Matrix Rain
 
-![Matrix Rain](./path-to-matrix-rain-screenshot.png)
+![Matrix Rain](https://drive.google.com/file/d/1aNBw_6yY6q7erIgV72sZAAFka15jY05R/view?usp=sharing)
 
 The Matrix Rain is a mesmerizing JavaScript animation that mimics the iconic "falling code" effect from the movie "The Matrix." It's developed using HTML5 Canvas and JavaScript. The code randomly generates characters and animates them to create the classic Matrix-style raindrops.
 
