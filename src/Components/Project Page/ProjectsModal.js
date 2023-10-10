@@ -8,7 +8,7 @@ import FPSGameContent from './PageContent/FPSGameContent';
 import FAREContent from './PageContent/FAREContent';
 import CPRImage from './PageContent/CPR1.png';
 import CPRImage2 from './PageContent/CPR2.png';
-import robotRadarImage1 from './PageContent/topview.png';
+//import robotRadarImage1 from './PageContent/topview.png';
 import robotRadarImage2 from './PageContent/radarGUI.png';
 
 const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
@@ -66,7 +66,7 @@ const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
 };
 
 const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalContent} />;
-const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} images={[robotRadarImage1, robotRadarImage2]} />;
+const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} images={[robotRadarImage2]} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
 const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} images={[CPRImage, CPRImage2]} />;
 const TeacherAttendanceModal = (props) => <ModalComponent {...props} modalText={TeacherAttendanceMonitoringSystemContent} />;
