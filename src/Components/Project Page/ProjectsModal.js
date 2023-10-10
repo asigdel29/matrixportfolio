@@ -66,7 +66,7 @@ const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
 };
 
 const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalContent} />;
-const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarContent} images={[robotRadarImage1, robotRadarImage2]} />;
+const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} images={[robotRadarImage1, robotRadarImage2]} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
 const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} images={[CPRImage, CPRImage2]} />;
 export {DBRModal,RobotRadarModal,RealTimeModal,CPRModal};
