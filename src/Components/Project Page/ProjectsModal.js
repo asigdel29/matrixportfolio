@@ -5,12 +5,18 @@ import RobotRadarModalContent from './PageContent/RobotRadarContent';
 import CPRModalContent from './PageContent/CPRContent';
 import CPRImage from './PageContent/CPR1.png';
 import CPRImage2 from './PageContent/CPR2.png';
+import robotRadarImage1 from './PageContent/topview.png';
+import robotRadarImage2 from './PageContent/radarGUI.png';
 
 
-const ModalComponent = ({ isOpen, onClose, modalText, imageSrcs }) => {
+const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
     const [visibleText, setVisibleText] = useState('');
     const [typingIndex, setTypingIndex] = useState(0);
     const typingSpeed = 8;
+
+    {images && images.map((img, idx) => (
+        <img key={idx} src={img} alt={`Modal Image ${idx + 1}`} />
+    ))}
 
     useEffect(() => {
         let intervalId;
@@ -45,20 +51,22 @@ const ModalComponent = ({ isOpen, onClose, modalText, imageSrcs }) => {
     return (
         <div className={isOpen ? 'modal open' : 'modal'}>
             <div className="modal-content">
-                {imageSrcs.map((src, index) => (
-                    <img key={index} src={src} alt={`Modal content ${index}`} />
-                ))}
                 <span className="close" onClick={onClose}>
-                &times;
-            </span>
+                    &times;
+                </span>
                 <div dangerouslySetInnerHTML={{ __html: visibleText }}></div>
+
+                {/* Conditional rendering of images */}
+                {images && images.map((img, idx) => (
+                    <img key={idx} src={img} alt={`Modal Image ${idx + 1}`} />
+                ))}
             </div>
         </div>
     );
 };
 
 const DBRModal = (props) => <ModalComponent {...props} modalText={DBRModalContent} />;
-const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarModalContent} />;
+const RobotRadarModal = (props) => <ModalComponent {...props} modalText={RobotRadarContent} images={[robotRadarImage1, robotRadarImage2]} />;
 const RealTimeModal = (props) => <ModalComponent {...props} modalText={RealTimeModalContent} />;
-const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} imageSrcs={[CPRImage, CPRImage2]} />;
+const CPRModal = (props) => <ModalComponent {...props} modalText={CPRModalContent} images={[CPRImage, CPRImage2]} />;
 export {DBRModal,RobotRadarModal,RealTimeModal,CPRModal};
