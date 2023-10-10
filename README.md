@@ -1,6 +1,6 @@
 # Anubhav's Portfolio
 
-## 🌐 Live at: [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/)
+## 🌐 Live at: [anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/)
 
 Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this repository, you'll discover a collection of my latest projects and contributions to the open-source community.
 
