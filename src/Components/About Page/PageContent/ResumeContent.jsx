@@ -2,9 +2,6 @@ const ResumeContent = `
 <pre>
                               Anubhav Sigdel
 
-New York | Email sigdelanubhav@gmail.com | LinkedIn - asigdel
-Github - asigdel29 | HackerRank - asigdel | Portfolio - https://anubhavsigdel.vercel.app/
-
 EDUCATION
 State University of New York Oswego, NY
 Bachelors in Computer Science and Cognitive Science

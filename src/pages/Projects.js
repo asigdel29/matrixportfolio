@@ -51,7 +51,7 @@ const Projects = () => {
         ls: {
             description: 'List all projects on the page',
             fn: function () {
-                return 'CPR\nLuminex\nFinTrack\nRoboScan';
+                return 'Here are the project names. Enter a name to learn more: \nCPRTool\nLuminex\nFinTrack\nRoboScan\nTeacherAttendance\nFPSGame\nFARE';
             }
         },
 
@@ -123,7 +123,7 @@ const Projects = () => {
             }
         },
 
-        CPR:{
+        CPRTool:{
             description: 'Calibrated Peer Review Tool',
             fn: function () {
                 setTimeout(function () {

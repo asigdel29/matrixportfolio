@@ -13,7 +13,6 @@ const bioContent = `
   <li>Computer Science: Java, C, C#, C++, Scala, Prolog, Go, Python, Lisp, AWS, Docker, React, Angular, CSS</li>
   <li>Data Analytics: SQL, R, NoSQL, Tableau, Excel</li>
   <li>Project Management: DevOps, Agile Development, Git, Kubernetes, Continuous integration and continuous deployment (CI/CD)</li>
-  <li>Machine Learning: TensorFlow, Keras, Natural Language Processing, Spark</li>
 </ul>
 `;
 
