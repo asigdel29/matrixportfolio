@@ -5,13 +5,9 @@
 Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this repository, you'll discover a collection of my latest projects and contributions to the open-source community.
 
 ### Matrix Rain
-**Video Demo**: [![Video Demo](https://example.com/matrix-rain-video-thumbnail.jpg)](https://drive.google.com/file/d/1aNBw_6yY6q7erIgV72sZAAFka15jY05R/view?usp=sharing)
+![Matrix Rain](../src/Components/Misc%20Page/matrix-rain-demo.mp4)
 
-![Matrix Rain](./path-to-matrix-rain-screenshot.png)
-
-The Matrix Rain is a mesmerizing JavaScript animation that mimics the iconic "falling code" effect from the movie "The Matrix." It's developed using HTML5 Canvas and JavaScript. The code randomly generates characters and animates them to create the classic Matrix-style raindrops.
-
-**Video Demo**: [![Video Demo](https://example.com/matrix-rain-video-thumbnail.jpg)](https://drive.google.com/file/d/1aNBw_6yY6q7erIgV72sZAAFka15jY05R/view?usp=sharing)
+The Matrix Rain is a JavaScript animation that mimics the iconic "falling code" effect from the movie "The Matrix." It's developed using HTML5 Canvas and JavaScript. The code randomly generates characters and animates them to create the classic Matrix-style raindrops.
 
 ### Portfolio Pages
 
@@ -30,7 +26,7 @@ The Matrix Rain is a mesmerizing JavaScript animation that mimics the iconic "fa
 Here's a quick example of how to navigate the Projects page using the interactive terminal:
 
 1. Type `ls` to list all available projects.
-2. To learn more about a specific project, type its name, e.g., `Luminex`.
+2. To learn more about a specific project, type its name, e.g., `CPRTool`.
 3. Explore project descriptions and interact with project-specific features.
 
 Feel free to explore the live portfolio at [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/) and have fun interacting with the various projects and content. If you have any questions, feedback, or suggestions, don't hesitate to reach out. And don't forget to give the repository a star ⭐️!
