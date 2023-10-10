@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import repoContent from './Page Content/Repo'; // Assuming you've stored the content in these files
+import cogsciContent from './Page Content/CogSci';
+import sweContent from './Page Content/SWE';
 
 const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
     const [visibleText, setVisibleText] = useState('');
     const [typingIndex, setTypingIndex] = useState(0);
     const typingSpeed = 8;
-
-    {images && images.map((img, idx) => (
-        <img key={idx} src={img} alt={`Modal Image ${idx + 1}`} />
-    ))}
 
     useEffect(() => {
         let intervalId;
@@ -54,9 +53,8 @@ const ModalComponent = ({ isOpen, onClose, modalText, images }) => {
     );
 };
 
+const CognitiveScienceLinks = (props) => <ModalComponent {...props} modalText={cogsciContent} />;
+const SoftwareEngineeringLinks = (props) => <ModalComponent {...props} modalText={sweContent} />;
+const Repositories  = (props) => <ModalComponent {...props} modalText={repoContent} />;
 
-const CognitiveScienceLinks = (props) => <ModalComponent {...props} modalText={CognitiveScienceLinks} />;
-const SoftwareEngineeringLinks = (props) => <ModalComponent {...props} modalText={SoftwareEngineeringLinks}/>;
-const Repositories  = (props) => <ModalComponent {...props} modalText={Repositories} />;
-
-export {};
+export { CognitiveScienceLinks, SoftwareEngineeringLinks, Repositories };
