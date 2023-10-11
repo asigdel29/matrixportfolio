@@ -17,7 +17,7 @@ const MatrixRain = () => {
         // Event listener for window resize
         window.addEventListener('resize', setCanvasDimensions);
 
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@$#%^&*()';
+        const characters = 'エウエアエイウアエイウアエイアアエイアイアイウイアウエエアウエエエイエイエイエイアウエウエイアウエウウイエウアイエアエアウイウイエアアイアイエウエウアウエエエイエウアイエウウアウイエウウエアイエアエウアイ';
         const columns = canvas.width / 20;
         const drops = [];
 
