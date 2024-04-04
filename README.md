@@ -64,3 +64,6 @@ Feel free to explore the live portfolio at [https://anubhavsigdel.vercel.app/](h
 
 Cheers!
 
+### Future Work
+I am in the process of integrating 'souls' into the project by guiding the cognitive processes of large language models (LLMs),to emulate different characters from the Matrix Movie
+
