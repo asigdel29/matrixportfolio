@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Layout from '../Components/Page Layout/Layout';
 import '../Styles/styles.css';
 import { BioModal, ResumeModal } from "../Components/About Page/AboutModal";
+// import { WorkingMemory, ChatMessageRoleEnum, Memory } from "@opensouls/core";
+// import { externalDialog } from "./lib/cogntiveSteps.js";
 
 
 const About = () => {
@@ -11,6 +13,24 @@ const About = () => {
     const [isAnimatingClose, setIsAnimatingClose] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+    // // Initialize WorkingMemory with initial memories
+    // let workingMemory = new WorkingMemory({
+    //     soulName: "A Helpful Assistant",
+    //     memories: [
+    //         {
+    //             role: ChatMessageRoleEnum.System,
+    //             content: "You are modeling the mind of a helpful AI assistant",
+    //         },
+    //     ],
+    // });
+    //
+    // async function withReply(workingMemory: WorkingMemory, newMessage: Memory): Promise<WorkingMemory> {
+    //     // externalDialog is a cognitiveStep defined in another function.
+    //     const [updatedMemory, response] = await externalDialog(workingMemory, newMessage);
+    //     console.log("AI:", response);
+    //     return updatedMemory;
+    // }
 
     const closeModal = (modalType) => {
         if (isClosing) return;
