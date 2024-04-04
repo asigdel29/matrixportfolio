@@ -4,11 +4,12 @@
 
 Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this repository, I've created a unique and interactive experience where you can explore my latest projects and contributions to the open-source community.
 
+
+## Features
 ### Terminal Emulator Experience
 
 
 https://github.com/asigdel29/portfolio/assets/64096825/e3ca1b35-dd28-4a33-8a27-2256b456930f
-
 
 
 I've designed this portfolio to provide an immersive terminal emulator experience. The interactive terminal-like interface allows you to navigate through my work and discover my projects with ease. Feel free to use the provided commands to explore my portfolio and learn more about my journey as a developer.
@@ -41,6 +42,25 @@ To help you get started, here's a quick example of how to navigate the Projects 
 2. To learn more about a specific project, type its name, e.g., `CPRTool`.
 3. Explore project descriptions and interact with project-specific features.
 
+
+### Cloning and Personalization
+To personalize this portfolio for yourself, you can clone this repository and modify the content to showcase your own projects and skills. Here's how you can do it:
+
+1. Clone the repository to your local machine using Git:
+
+```console
+git clone https://github.com/asigdel29/portfolio.git
+```
+2. Navigate to the cloned repository:
+```console
+cd portfolio
+```
+3. Edit the content to personalize it for yourself. You can modify the Projects, About, Research, and Miscellaneous pages to reflect your own projects, skills, academic background, and additional content.
+
+
+4. Once you've made your changes, you can deploy the portfolio to a hosting service of your choice (I use Vercel) to make it live.
+
 Feel free to explore the live portfolio at [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/). I hope you enjoy the immersive experience and discover some exciting projects. If you have any questions, feedback, or suggestions, don't hesitate to reach out. Don't forget to give the repository a star ⭐️ to show your support!
 
 Cheers!
+
