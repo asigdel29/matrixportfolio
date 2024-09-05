@@ -1,10 +1,10 @@
-# Anubhav's Portfolio
+# Matrix Portfolio Template
 
 ## 🌐 Live Demo: [anubhavsigdel.vercel.app](https://anubhavsigdel.vercel.app/)
 
 Welcome!
 
-I created this portfolio as a tribute to my love for the Matrix movie. In this repository, I’ve designed an immersive and interactive experience where users can explore various aspects of my work as if they’re navigating a terminal.
+I created this as a tribute to my love for the Matrix movie. In this repository, I’ve designed an immersive and interactive experience where users can explore various aspects of my work as if they’re navigating a terminal.
 
 
 ## Features
