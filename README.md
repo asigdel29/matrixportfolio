@@ -1,8 +1,10 @@
 # Anubhav's Portfolio
 
-## 🌐 Live at: [anubhavsigdel.vercel.app](https://anubhavsigdel.vercel.app/)
+## 🌐 Live Demo: [anubhavsigdel.vercel.app](https://anubhavsigdel.vercel.app/)
 
-Welcome to my Portfolio! I'm Anubhav, a full-stack software developer. In this repository, I've created a unique and interactive experience where you can explore my latest projects and contributions to the open-source community.
+Welcome!
+
+I created this portfolio as a tribute to my love for the Matrix movie. In this repository, I’ve designed an immersive and interactive experience where users can explore various aspects of my work as if they’re navigating a terminal.
 
 
 ## Features
@@ -22,7 +24,7 @@ One of the standout features of this portfolio is the Matrix Rain background. In
 
 ### Portfolio Pages
 
-Here's a quick overview of the different sections you'll find in my portfolio:
+Here's a quick overview of the different sections you'll find:
 
 - **Home**: The main landing page provides an introduction to my portfolio and highlights my key skills and areas of expertise.
 
@@ -60,10 +62,6 @@ cd portfolio
 
 4. Once you've made your changes, you can deploy the portfolio to a hosting service of your choice (I use Vercel) to make it live.
 
-Feel free to explore the live portfolio at [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/). I hope you enjoy the immersive experience and discover some exciting projects. If you have any questions, feedback, or suggestions, don't hesitate to reach out. Don't forget to give the repository a star ⭐️ to show your support!
+Feel free to explore the live version at [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/). I hope you enjoy the immersive experience. If you have any questions, feedback, or suggestions, don't hesitate to reach out. Don't forget to give the repository a star ⭐️ to show your support!
 
 Cheers!
-
-### Future Work
-I am in the process of integrating 'souls' into the project by guiding the cognitive processes of large language models (LLMs),to emulate different characters from the Matrix Movie
-
