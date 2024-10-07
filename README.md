@@ -60,6 +60,6 @@ cd portfolio
 
 4. Once you've made your changes, you can deploy the portfolio to a hosting service of your choice (I use Vercel) to make it live.
 
-Feel free to explore the live version at [https://anubhavsigdel.vercel.app/](https://anubhavsigdel.vercel.app/). I hope you enjoy the immersive experience. If you have any questions, feedback, or suggestions, don't hesitate to reach out. Don't forget to give the repository a star ⭐️ to show your support!
+I hope you enjoy the immersive experience. If you have any questions, feedback, or suggestions, don't hesitate to reach out. Don't forget to give the repository a star ⭐️ to show your support!
 
 Cheers!
