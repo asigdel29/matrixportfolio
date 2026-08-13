@@ -1,3 +1,5 @@
+
+
 # Matrix Portfolio Template
 
 Welcome!
@@ -49,11 +51,11 @@ To personalize this portfolio for yourself, you can clone this repository and mo
 1. Clone the repository to your local machine using Git:
 
 ```console
-git clone https://github.com/asigdel29/portfolio.git
+git clone https://github.com/asigdel29/matrixportfolio.git
 ```
 2. Navigate to the cloned repository:
 ```console
-cd portfolio
+cd matrixportfolio
 ```
 3. Edit the content to personalize it for yourself. You can modify the Projects, About, Research, and Miscellaneous pages to reflect your own projects, skills, academic background, and additional content.
 
